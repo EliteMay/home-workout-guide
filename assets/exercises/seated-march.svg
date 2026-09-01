@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" aria-labelledby="title desc">
+  <title id="title">座ってもも上げ</title>
+  <desc id="desc">安定した椅子に座り、背すじを保ったまま片膝ずつ持ち上げて戻す。</desc>
+  <defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#79d7a5"/></marker><style>.bg{fill:#11151b}.panel{fill:#171a21;stroke:#2b323d;stroke-width:2}.body{fill:#dce4eb}.limb{stroke:#dce4eb;stroke-width:23;stroke-linecap:round}.chair{fill:none;stroke:#8995a3;stroke-width:15;stroke-linecap:round;stroke-linejoin:round}.label{fill:#79d7a5;font:800 21px system-ui,sans-serif}.note{fill:#aeb7c4;font:600 18px system-ui,sans-serif}.arrow{fill:none;stroke:#79d7a5;stroke-width:8;stroke-linecap:round;marker-end:url(#arrow)}</style></defs>
+  <rect class="bg" width="960" height="420" rx="24"/><rect class="panel" x="24" y="24" width="430" height="372" rx="20"/><rect class="panel" x="506" y="24" width="430" height="372" rx="20"/>
+  <text class="label" x="52" y="62">① 両足を床へ</text><text class="note" x="52" y="90">背すじを立て、手は太ももへ</text>
+  <path class="chair" d="M134 172V332M134 260H310M310 260V342"/>
+  <circle class="body" cx="224" cy="124" r="32"/><rect class="body" x="182" y="158" width="84" height="98" rx="34"/>
+  <line class="limb" x1="200" y1="248" x2="178" y2="295"/><line class="limb" x1="178" y1="295" x2="178" y2="350"/><line class="limb" x1="242" y1="248" x2="270" y2="295"/><line class="limb" x1="270" y1="295" x2="270" y2="350"/>
+  <text class="label" x="534" y="62">② 片膝を上げる</text><text class="note" x="534" y="90">上体を後ろへ倒さず交互に</text>
+  <path class="chair" d="M616 172V332M616 260H792M792 260V342"/>
+  <circle class="body" cx="706" cy="124" r="32"/><rect class="body" x="664" y="158" width="84" height="98" rx="34"/>
+  <line class="limb" x1="682" y1="248" x2="650" y2="292"/><line class="limb" x1="650" y1="292" x2="650" y2="350"/>
+  <line class="limb" x1="724" y1="248" x2="780" y2="225"/><line class="limb" x1="780" y1="225" x2="820" y2="270"/>
+  <path class="arrow" d="M786 330C822 305 835 270 816 237"/>
+  <text class="note" x="480" y="396" text-anchor="middle">太ももの付け根〜前側・体幹 / 左右交互にゆっくり</text>
+</svg>
