@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" aria-labelledby="title desc">
+  <title id="title">座ってショルダープレス</title>
+  <desc id="desc">背もたれのある安定した椅子に座り、ダンベルを肩の横から頭上へ押し上げる。</desc>
+  <defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#79d7a5"/></marker><style>.bg{fill:#11151b}.panel{fill:#171a21;stroke:#2b323d;stroke-width:2}.body{fill:#dce4eb}.limb{stroke:#dce4eb;stroke-width:23;stroke-linecap:round}.chair{fill:none;stroke:#8995a3;stroke-width:15;stroke-linecap:round;stroke-linejoin:round}.db{fill:#79d7a5}.label{fill:#79d7a5;font:800 21px system-ui,sans-serif}.note{fill:#aeb7c4;font:600 18px system-ui,sans-serif}.arrow{fill:none;stroke:#79d7a5;stroke-width:8;stroke-linecap:round;marker-end:url(#arrow)}</style></defs>
+  <rect class="bg" width="960" height="420" rx="24"/><rect class="panel" x="24" y="24" width="430" height="372" rx="20"/><rect class="panel" x="506" y="24" width="430" height="372" rx="20"/>
+  <text class="label" x="52" y="62">① 肩の横</text><text class="note" x="52" y="90">背もたれに体を預けすぎず座る</text>
+  <path class="chair" d="M126 170V332M126 260H302M302 260V342"/>
+  <circle class="body" cx="220" cy="124" r="32"/><rect class="body" x="178" y="158" width="84" height="98" rx="34"/>
+  <line class="limb" x1="188" y1="180" x2="153" y2="205"/><line class="limb" x1="153" y1="205" x2="153" y2="151"/><line class="limb" x1="252" y1="180" x2="287" y2="205"/><line class="limb" x1="287" y1="205" x2="287" y2="151"/>
+  <line class="limb" x1="201" y1="248" x2="178" y2="330"/><line class="limb" x1="239" y1="248" x2="262" y2="330"/>
+  <g class="db"><rect x="126" y="142" width="54" height="14" rx="7"/><rect x="118" y="134" width="14" height="30" rx="4"/><rect x="174" y="134" width="14" height="30" rx="4"/><rect x="260" y="142" width="54" height="14" rx="7"/><rect x="252" y="134" width="14" height="30" rx="4"/><rect x="308" y="134" width="14" height="30" rx="4"/></g>
+  <text class="label" x="534" y="62">② 真上へ</text><text class="note" x="534" y="90">腰を反らさず、ゆっくり押す</text>
+  <path class="chair" d="M608 170V332M608 260H784M784 260V342"/>
+  <circle class="body" cx="702" cy="132" r="32"/><rect class="body" x="660" y="166" width="84" height="90" rx="34"/>
+  <line class="limb" x1="670" y1="188" x2="640" y2="125"/><line class="limb" x1="640" y1="125" x2="640" y2="82"/><line class="limb" x1="734" y1="188" x2="764" y2="125"/><line class="limb" x1="764" y1="125" x2="764" y2="82"/>
+  <line class="limb" x1="683" y1="248" x2="660" y2="330"/><line class="limb" x1="721" y1="248" x2="744" y2="330"/>
+  <g class="db"><rect x="613" y="72" width="54" height="14" rx="7"/><rect x="605" y="64" width="14" height="30" rx="4"/><rect x="661" y="64" width="14" height="30" rx="4"/><rect x="737" y="72" width="54" height="14" rx="7"/><rect x="729" y="64" width="14" height="30" rx="4"/><rect x="785" y="64" width="14" height="30" rx="4"/></g>
+  <path class="arrow" d="M592 195C565 150 577 105 611 82"/><path class="arrow" d="M812 195C839 150 827 105 793 82"/>
+  <text class="note" x="480" y="396" text-anchor="middle">肩の前〜横・二の腕の後ろ / 3kgが重ければ片手ずつ</text>
+</svg>
