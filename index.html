@@ -15,7 +15,7 @@
     <div class="container">
       <p class="eyebrow">HOME WORKOUT GUIDE</p>
       <h1>フォーム優先で、無理なく続ける。</h1>
-      <p class="lead">自重トレーニングと、3kgダンベル2個でできる初心者向けメニュー。開始姿勢と終了姿勢を並べた図で確認できます。</p>
+      <p class="lead">自重トレーニングと、3kgダンベル2個でできる初心者向けメニュー。開始姿勢・終了姿勢・効いている場所をまとめて確認できます。</p>
       <nav class="quick-nav" aria-label="主要メニュー">
         <a href="#before">始める前</a>
         <a href="#dumbbell">3kgダンベル</a>
@@ -33,10 +33,15 @@
       <h2 id="first-title">最初に見るポイント</h2>
       <div class="rules-grid">
         <article><strong>回数よりフォーム</strong><span>崩れ始めたら、そのセットは終了。</span></article>
-        <article><strong>強い筋肉痛は追い込まない</strong><span>痛む部位を無理に強く鍛え直さない。</span></article>
-        <article><strong>鋭い痛みは別扱い</strong><span>関節の痛み・しびれ・強い腫れが出たら中止。</span></article>
+        <article><strong>筋肉の疲れはOK</strong><span>使っている筋肉の張り・熱さ・だるさは出ることがある。</span></article>
+        <article><strong>関節の痛みはNG</strong><span>手首・肘・肩・膝・腰などの鋭い痛みは「効いている」と考えない。</span></article>
         <article><strong>呼吸を止めない</strong><span>力んでも、自然な呼吸を続ける。</span></article>
       </div>
+      <div class="sensation-key">
+        <div class="sensation-ok"><strong>○ 正しく効いている感覚</strong><span>筋肉がじわっと張る、熱くなる、重くなる、最後の数回がきつくなる。</span></div>
+        <div class="sensation-ng"><strong>× 中止する痛み</strong><span>関節の鋭い痛み、ピリッとする痛み、しびれ、強い腫れ、フォームを変えないと続けられない痛み。</span></div>
+      </div>
+      <p class="footnote">翌日に筋肉痛が来なくても、トレーニングが無意味だったとは限りません。筋肉痛の強さを成果の基準にしないでください。</p>
     </section>
 
     <section id="before" class="exercise">
@@ -66,7 +71,7 @@
 
       <div class="visual-guide">
         <strong>図の見方</strong>
-        <span><b>左が開始姿勢</b>、<b>右が動かした後</b>です。緑のダンベルと矢印だけ見ても動きが追えるようにしています。</span>
+        <span><b>左が開始姿勢</b>、<b>右が動かした後</b>です。緑のダンベルと矢印を追ってください。</span>
       </div>
 
       <div class="wrist-note">
@@ -84,13 +89,14 @@
             <img src="assets/exercises/dumbbell-curl.svg" alt="ダンベルカール。左は腕を下げた開始姿勢、右は肘を固定したままダンベルを肩へ近づけた姿勢。">
             <figcaption><strong>ここだけ覚える：</strong>肘の位置を変えず、前腕だけを上げ下げする。</figcaption>
           </figure>
+          <div class="feel-target"><strong>効いている場所</strong><span>主に<strong>力こぶの部分（上腕の前側）</strong>。後半になるほどここが張る・熱くなる感覚が出やすい。</span></div>
           <ol class="howto">
             <li>足を肩幅くらいにして、左右に1個ずつ持つ。</li>
             <li><strong>肘を体の横に固定</strong>する。</li>
             <li>手のひらを前に向け、ダンベルを肩方向へ上げる。</li>
             <li>上で止めすぎず、<strong>2〜3秒かけて下ろす</strong>。</li>
           </ol>
-          <div class="dose"><strong>12〜20回 × 2セット</strong><span>反動で体を振らない</span></div>
+          <div class="dose"><strong>12〜20回 × 2セット</strong><span>手首や肘が痛むなら中止</span></div>
         </article>
 
         <article class="movement-card">
@@ -102,6 +108,7 @@
             <img src="assets/exercises/shoulder-press.svg" alt="ショルダープレス。左はダンベルを肩の横に構えた姿勢、右は頭上へ真っすぐ押し上げた姿勢。">
             <figcaption><strong>ここだけ覚える：</strong>肩の横から頭の上へ、真上に押す。</figcaption>
           </figure>
+          <div class="feel-target"><strong>効いている場所</strong><span>主に<strong>肩の前〜横</strong>と<strong>二の腕の後ろ</strong>。肩関節そのものが刺すように痛むのは別。</span></div>
           <ol class="howto">
             <li>ダンベルを肩の横へ。手首はまっすぐ。</li>
             <li>お腹に軽く力を入れ、腰を反らしすぎない。</li>
@@ -114,19 +121,20 @@
         <article class="movement-card">
           <div class="movement-head">
             <span class="step-number">03</span>
-            <div><h3>ベントオーバーロー</h3><p>背中 / 腕</p></div>
+            <div><h3>ベントオーバーロー</h3><p>背中 / 肩の後ろ</p></div>
           </div>
           <figure class="exercise-visual">
             <img src="assets/exercises/bent-over-row.svg" alt="ベントオーバーロー。左は背中をまっすぐにして前傾し腕を下げた姿勢、右は肘を腰の後ろへ引いた姿勢。">
             <figcaption><strong>ここだけ覚える：</strong>ダンベルを上げるより、肘を腰の後ろへ引く。</figcaption>
           </figure>
+          <div class="feel-target"><strong>効いている場所</strong><span>主に<strong>肩の後ろ〜肩甲骨のまわり・上背部</strong>。腕の前側も補助で疲れることがある。</span></div>
           <ol class="howto">
             <li>膝を軽く曲げ、お尻を後ろへ引いて上体を前傾。</li>
             <li>背中を丸めず、ダンベルを真下へ垂らす。</li>
             <li><strong>肘を腰の後ろへ引く</strong>イメージで持ち上げる。</li>
             <li>肩をすくめず、ゆっくり下ろす。</li>
           </ol>
-          <div class="dose"><strong>15〜25回 × 2セット</strong><span>背中を丸めない</span></div>
+          <div class="dose"><strong>15〜25回 × 2セット</strong><span>腰が痛むならフォームを中止して確認</span></div>
         </article>
 
         <article class="movement-card">
@@ -138,13 +146,14 @@
             <img src="assets/exercises/dumbbell-squat.svg" alt="ダンベルスクワット。左は左右にダンベルを持って立った姿勢、右はお尻を後ろへ引きながらしゃがんだ姿勢。">
             <figcaption><strong>ここだけ覚える：</strong>真下に沈むより、お尻を後ろへ引きながらしゃがむ。</figcaption>
           </figure>
+          <div class="feel-target"><strong>効いている場所</strong><span>主に<strong>太ももの前・太ももの後ろ・お尻</strong>。立ち上がる後半で脚とお尻がきつくなる。</span></div>
           <ol class="howto">
             <li>左右に1個ずつ持ち、足を肩幅前後にする。</li>
             <li>お尻を後ろへ引きながら膝を曲げる。</li>
             <li><strong>3秒かけて下がる</strong>。</li>
             <li>かかとを床につけたまま立ち上がる。</li>
           </ol>
-          <div class="dose"><strong>15〜25回 × 2セット</strong><span>深さより安定を優先</span></div>
+          <div class="dose"><strong>15〜25回 × 2セット</strong><span>膝や腰の鋭い痛みはNG</span></div>
         </article>
       </div>
 
@@ -160,12 +169,17 @@
       </div>
     </section>
 
-    <section id="pushup" class="exercise">
+    <section id="pushup" class="exercise visual-exercise">
       <div class="section-heading">
         <p class="tag">PUSH-UP</p>
         <h2>腕立て伏せ</h2>
-        <p>胸・肩・上腕三頭筋を中心に使う。手首に痛みが出る日は無理に行いません。</p>
+        <p>胸・二の腕・体幹を使う。手首に痛みが出る日は無理に行いません。</p>
       </div>
+      <figure class="exercise-visual standalone-visual">
+        <img src="assets/exercises/push-up.svg" alt="腕立て伏せ。左は体を一直線にして腕を伸ばした開始姿勢、右は一直線を保ったまま胸を床へ近づけた姿勢。">
+        <figcaption><strong>ここだけ覚える：</strong>頭からかかとまでを1本の板みたいに保ったまま、胸を下げて押し戻す。</figcaption>
+      </figure>
+      <div class="feel-target standalone-feel"><strong>効いている場所</strong><span>主に<strong>胸</strong>と<strong>二の腕の後ろ</strong>。お腹・背中も体を一直線に保つために力が入る。手首の付け根の痛みは「効いている」感覚ではありません。</span></div>
       <div class="content-grid">
         <article class="card">
           <h3>フォーム</h3>
@@ -183,24 +197,65 @@
       </div>
     </section>
 
-    <section id="squat" class="exercise">
-      <div class="section-heading"><p class="tag">SQUAT</p><h2>自重スクワット</h2><p>ダンベルなしでもフォーム練習として使えます。</p></div>
+    <section id="squat" class="exercise visual-exercise">
+      <div class="section-heading">
+        <p class="tag">SQUAT</p>
+        <h2>自重スクワット</h2>
+        <p>ダンベルなしでも脚とお尻を鍛えられ、フォーム練習にも使えます。</p>
+      </div>
+      <figure class="exercise-visual standalone-visual">
+        <img src="assets/exercises/bodyweight-squat.svg" alt="自重スクワット。左は肩幅前後で立った開始姿勢、右はかかとを床につけてお尻を後ろへ引きながらしゃがんだ姿勢。">
+        <figcaption><strong>ここだけ覚える：</strong>後ろに椅子があるつもりで、お尻を後ろへ引きながらしゃがむ。</figcaption>
+      </figure>
+      <div class="feel-target standalone-feel"><strong>効いている場所</strong><span>主に<strong>太もも</strong>と<strong>お尻</strong>。しゃがんで立つ回数が増えると、この筋肉が重くなる・熱くなる感覚が出やすい。</span></div>
       <div class="content-grid">
-        <article class="card"><h3>フォーム</h3><ol><li>足は肩幅前後、つま先は自然に少し外へ。</li><li>足裏全体で床を踏む。</li><li>お尻を後ろへ引きながら股関節・膝を曲げる。</li><li>膝はつま先とだいたい同じ方向へ。</li></ol></article>
-        <article class="card"><h3>深さ</h3><p><strong>かかとが浮かず、ふらつかず、同じフォームで戻れる深さ</strong>を優先します。</p></article>
+        <article class="card">
+          <h3>フォーム</h3>
+          <ol>
+            <li>足は肩幅前後、つま先は自然に少し外へ。</li>
+            <li>足裏全体で床を踏み、かかとを浮かせない。</li>
+            <li>お尻を後ろへ引きながら股関節・膝を曲げる。</li>
+            <li>膝はつま先とだいたい同じ方向へ。</li>
+          </ol>
+        </article>
+        <article class="card">
+          <h3>深さ</h3>
+          <p><strong>かかとが浮かず、ふらつかず、同じフォームで戻れる深さ</strong>を優先します。</p>
+        </article>
       </div>
     </section>
 
-    <section id="plank" class="exercise">
-      <div class="section-heading"><p class="tag">PLANK</p><h2>プランク</h2><p>腹部・背中まわりを含む体幹を、姿勢を保ちながら使います。</p></div>
+    <section id="plank" class="exercise visual-exercise">
+      <div class="section-heading">
+        <p class="tag">PLANK</p>
+        <h2>プランク</h2>
+        <p>動く種目ではなく、正しい一直線を保ち続ける体幹トレーニングです。</p>
+      </div>
+      <figure class="exercise-visual standalone-visual plank-visual">
+        <img src="assets/exercises/plank.svg" alt="プランク。左は頭からかかとまで一直線にした正しい姿勢。右は腰が落ちる例と、お尻が上がりすぎる例。">
+        <figcaption><strong>ここだけ覚える：</strong>腰を上げ下げせず、頭・背中・お尻・かかとが一本につながる姿勢をキープ。</figcaption>
+      </figure>
+      <div class="feel-target standalone-feel"><strong>効いている場所</strong><span>主に<strong>お腹まわり・体幹</strong>。背中や肩にも姿勢を支える疲れが出ることがある。腰が鋭く痛い場合は姿勢を崩して続けない。</span></div>
       <div class="content-grid">
-        <article class="card"><h3>フォーム</h3><ol><li>肘を肩のほぼ真下へ。</li><li>頭・背中・お尻・かかとをほぼ一直線に。</li><li>腰を反らさず、お尻を上げすぎない。</li><li>呼吸を続け、崩れる前に終了。</li></ol></article>
+        <article class="card">
+          <h3>フォーム</h3>
+          <ol>
+            <li>肘を肩のほぼ真下へ。</li>
+            <li>頭・背中・お尻・かかとをほぼ一直線に。</li>
+            <li>腰を反らさず、お尻を上げすぎない。</li>
+            <li>呼吸を続け、崩れる前に終了。</li>
+          </ol>
+        </article>
         <article class="card accent-card"><h3>目安</h3><p>15〜30秒 × 2セットから。腰・首・肩に鋭い痛みが出たら終了します。</p></article>
       </div>
     </section>
 
     <section id="recovery" class="exercise">
-      <div class="section-heading"><p class="tag">RECOVERY</p><h2>筋肉痛・張りがある日</h2><p>遅発性筋肉痛（DOMS）は、慣れない運動や強い運動のあと1〜3日ほどして出ることがあります。</p></div>
+      <div class="section-heading">
+        <p class="tag">RECOVERY</p>
+        <h2>筋肉痛・張りがある日</h2>
+        <p>遅発性筋肉痛（DOMS）は、慣れない運動や強い運動のあと1〜3日ほどして出ることがあります。</p>
+      </div>
       <div class="status-grid">
         <article class="status ok"><h3>軽く動いてよい目安</h3><p>軽い張りやだるさで、日常動作とフォームに大きな問題がない。</p></article>
         <article class="status caution"><h3>負荷を下げる</h3><p>フォームが保てない、いつもの回数がほとんどできない、筋肉痛が強い。</p></article>
@@ -209,7 +264,11 @@
     </section>
 
     <section id="routine" class="exercise">
-      <div class="section-heading"><p class="tag">HOW TO PROGRESS</p><h2>3kgが軽くなってきたら</h2><p>重量をすぐ買い替えなくても、ある程度は難しくできます。</p></div>
+      <div class="section-heading">
+        <p class="tag">HOW TO PROGRESS</p>
+        <h2>3kgが軽くなってきたら</h2>
+        <p>重量をすぐ買い替えなくても、ある程度は難しくできます。</p>
+      </div>
       <div class="content-grid progress-grid">
         <article class="card"><h3>① 回数を少し増やす</h3><p>フォームが崩れず余裕なら、まず1〜3回ずつ増やします。</p></article>
         <article class="card"><h3>② 下ろす動作を遅くする</h3><p>2〜3秒かけて下ろすだけでも、3kgの負荷を感じやすくなります。</p></article>
@@ -220,10 +279,14 @@
     <section class="sources" aria-labelledby="sources-title">
       <h2 id="sources-title">参考情報</h2>
       <ul class="source-list">
-        <li><a href="https://www.mayoclinic.org/healthy-lifestyle/fitness/multimedia/biceps-curl/vid-20084675">Mayo Clinic — Biceps curl</a></li>
-        <li><a href="https://www.mayoclinic.org/healthy-lifestyle/fitness/multimedia/squat/vid-20084682">Mayo Clinic — Squat exercise</a></li>
+        <li><a href="https://www.mayoclinic.org/healthy-lifestyle/fitness/multimedia/biceps-curl/vid-20084675">Mayo Clinic — Biceps curl with dumbbell</a></li>
+        <li><a href="https://www.mayoclinic.org/healthy-lifestyle/fitness/multimedia/bent-over-row/vid-20084680">Mayo Clinic — Bent-over row with dumbbell</a></li>
+        <li><a href="https://www.mayoclinic.org/healthy-lifestyle/fitness/multimedia/squat/vid-20084682">Mayo Clinic — Squat with dumbbell</a></li>
+        <li><a href="https://www.mayoclinic.org/healthy-lifestyle/fitness/multimedia/squat/vid-20084663">Mayo Clinic — Squat exercise</a></li>
+        <li><a href="https://www.mayoclinic.org/healthy-lifestyle/fitness/multimedia/modified-pushup/vid-20084674">Mayo Clinic — Modified pushup</a></li>
+        <li><a href="https://www.mayoclinic.org/healthy-lifestyle/fitness/in-depth/core-strength/art-20546851">Mayo Clinic — Core-strength exercises</a></li>
+        <li><a href="https://www.acefitness.org/resources/pros/expert-articles/9074/smart-shoulder-solutions-an-evidence-based-approach-to-training-the-deltoids/">ACE — Dumbbell shoulder press / deltoids</a></li>
         <li><a href="https://my.clevelandclinic.org/health/diseases/delayed-onset-muscle-soreness">Cleveland Clinic — Delayed Onset Muscle Soreness (DOMS)</a></li>
-        <li><a href="https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/physical-activity/increase-proportion-adults-who-do-enough-muscle-strengthening-activity-pa-04">U.S. Office of Disease Prevention and Health Promotion — Muscle-strengthening activity</a></li>
       </ul>
       <p class="footnote">このサイトは一般的な運動情報であり、個別の診断・治療・リハビリの指示を目的としたものではありません。</p>
     </section>
