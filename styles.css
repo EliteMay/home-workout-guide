@@ -114,16 +114,26 @@ main { padding: 36px 0 72px; }
 .accent-card { background: var(--accent-soft); border-color: rgba(121,215,165,.35); }
 .mini, .footnote { color: var(--muted); font-size: .92rem; }
 
+.visual-guide,
 .wrist-note {
   display: grid;
   gap: 5px;
-  margin-top: 22px;
+  margin-top: 18px;
   padding: 16px 18px;
+  border-radius: 12px;
+}
+.visual-guide {
+  border: 1px solid rgba(121,215,165,.28);
+  background: var(--accent-soft);
+}
+.visual-guide span,
+.wrist-note span { color: var(--muted); }
+.visual-guide b { color: var(--text); }
+.wrist-note {
   border-left: 4px solid var(--warn);
   border-radius: 0 12px 12px 0;
   background: rgba(228,179,93,.09);
 }
-.wrist-note span { color: var(--muted); }
 
 .dumbbell-grid {
   display: grid;
@@ -158,36 +168,28 @@ main { padding: 36px 0 72px; }
 }
 .exercise-visual {
   margin: 0 14px;
+  overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 15px;
   background: #11151b;
 }
-.exercise-visual svg { display: block; width: 100%; height: auto; }
-.exercise-visual .figure circle,
-.exercise-visual .figure line {
-  fill: none;
-  stroke: #dce4eb;
-  stroke-width: 7;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+.exercise-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 7;
+  object-fit: contain;
+  background: #11151b;
 }
-.exercise-visual .figure.start { opacity: .58; }
-.exercise-visual .figure.end { opacity: 1; }
-.exercise-visual .motion-arrow {
-  fill: none;
-  stroke: var(--accent);
-  stroke-width: 5;
-  stroke-linecap: round;
-  stroke-dasharray: 7 8;
+.exercise-visual figcaption {
+  margin: 0;
+  padding: 12px 14px 14px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .92rem;
+  line-height: 1.55;
 }
-.exercise-visual .svg-arrow { fill: var(--accent); }
-.exercise-visual text {
-  fill: var(--muted);
-  font-family: system-ui, sans-serif;
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: .08em;
-}
+.exercise-visual figcaption strong { color: var(--text); }
 .howto { margin: 18px 20px; padding-left: 1.35rem; }
 .howto li + li { margin-top: 7px; }
 .dose {
@@ -261,6 +263,8 @@ footer { border-top: 1px solid var(--line); padding: 28px 0 42px; color: var(--m
   .quick-nav a { flex: 1 1 auto; justify-content: center; }
   .movement-head { padding-inline: 16px; }
   .exercise-visual { margin-inline: 10px; }
+  .exercise-visual img { aspect-ratio: auto; }
+  .exercise-visual figcaption { font-size: .9rem; }
   .howto { margin-inline: 16px; }
   .dose { margin-inline: 16px; flex-direction: column; align-items: flex-start; }
   .dose span { text-align: left; }
