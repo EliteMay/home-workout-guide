@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" aria-labelledby="title desc">
+  <title id="title">ベントオーバーローの開始姿勢と終了姿勢</title>
+  <desc id="desc">背中をまっすぐに保って上体を前へ倒し、腕を下げた状態から肘を腰の後ろへ引いてダンベルを脇腹へ近づける。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#79d7a5"/></marker>
+    <style>
+      .panel{fill:#171a21;stroke:#2b323d;stroke-width:2}.title{fill:#f2f4f7;font:700 24px system-ui,sans-serif}.label{fill:#79d7a5;font:800 21px system-ui,sans-serif}.note{fill:#aeb7c4;font:600 18px system-ui,sans-serif}.body{fill:#dce4eb}.limb{stroke:#dce4eb;stroke-width:24;stroke-linecap:round}.spine{stroke:#79d7a5;stroke-width:7;stroke-linecap:round}.db{fill:#79d7a5;stroke:#0f1115;stroke-width:3}.arrow{fill:none;stroke:#79d7a5;stroke-width:8;stroke-linecap:round;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="960" height="420" rx="24" fill="#11151b"/>
+  <rect class="panel" x="24" y="24" width="430" height="372" rx="20"/><rect class="panel" x="506" y="24" width="430" height="372" rx="20"/>
+  <text class="label" x="52" y="62">① 開始</text><text class="note" x="52" y="90">お尻を後ろへ。背中はまっすぐ</text>
+  <circle class="body" cx="163" cy="139" r="31"/>
+  <path class="limb" d="M190 158L283 206"/><path class="spine" d="M190 158L283 206"/>
+  <path class="limb" d="M244 186L218 292"/><path class="limb" d="M264 196L260 302"/>
+  <path class="limb" d="M283 206L241 282"/><path class="limb" d="M283 206L326 282"/><path class="limb" d="M241 282L218 355"/><path class="limb" d="M326 282L350 355"/>
+  <g class="db" transform="translate(185 294)"><rect x="0" y="10" width="58" height="12" rx="6"/><rect x="-8" y="2" width="13" height="28" rx="4"/><rect x="53" y="2" width="13" height="28" rx="4"/></g>
+  <g class="db" transform="translate(233 304)"><rect x="0" y="10" width="58" height="12" rx="6"/><rect x="-8" y="2" width="13" height="28" rx="4"/><rect x="53" y="2" width="13" height="28" rx="4"/></g>
+  <text class="label" x="534" y="62">② 引く</text><text class="note" x="534" y="90">肘を腰の後ろへ。肩をすくめない</text>
+  <circle class="body" cx="645" cy="139" r="31"/>
+  <path class="limb" d="M672 158L765 206"/><path class="spine" d="M672 158L765 206"/>
+  <path class="limb" d="M721 184L681 213"/><path class="limb" d="M746 197L708 225"/>
+  <path class="limb" d="M765 206L723 282"/><path class="limb" d="M765 206L808 282"/><path class="limb" d="M723 282L700 355"/><path class="limb" d="M808 282L832 355"/>
+  <g class="db" transform="translate(646 205)"><rect x="0" y="10" width="58" height="12" rx="6"/><rect x="-8" y="2" width="13" height="28" rx="4"/><rect x="53" y="2" width="13" height="28" rx="4"/></g>
+  <g class="db" transform="translate(682 220)"><rect x="0" y="10" width="58" height="12" rx="6"/><rect x="-8" y="2" width="13" height="28" rx="4"/><rect x="53" y="2" width="13" height="28" rx="4"/></g>
+  <path class="arrow" d="M602 300C610 258 620 228 642 210"/><path class="arrow" d="M874 300C858 258 835 230 810 213"/>
+  <text class="title" x="480" y="405" text-anchor="middle">腕で持ち上げるより「肘を後ろへ引く」</text>
+</svg>
