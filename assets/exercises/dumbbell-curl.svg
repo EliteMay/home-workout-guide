@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" aria-labelledby="title desc">
+  <title id="title">ダンベルカールの開始姿勢と終了姿勢</title>
+  <desc id="desc">左右にダンベルを持って腕を下げた開始姿勢から、肘を体の横に固定したまま前腕を曲げ、ダンベルを肩へ近づける。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#79d7a5"/></marker>
+    <style>
+      .panel{fill:#171a21;stroke:#2b323d;stroke-width:2}.title{fill:#f2f4f7;font:700 24px system-ui,sans-serif}.label{fill:#79d7a5;font:800 21px system-ui,sans-serif}.note{fill:#aeb7c4;font:600 18px system-ui,sans-serif}.body{fill:#dce4eb}.limb{stroke:#dce4eb;stroke-width:24;stroke-linecap:round}.joint{fill:#79d7a5}.db{fill:#79d7a5;stroke:#0f1115;stroke-width:3}.arrow{fill:none;stroke:#79d7a5;stroke-width:8;stroke-linecap:round;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="960" height="420" rx="24" fill="#11151b"/>
+  <rect class="panel" x="24" y="24" width="430" height="372" rx="20"/><rect class="panel" x="506" y="24" width="430" height="372" rx="20"/>
+  <text class="label" x="52" y="62">① 開始</text><text class="note" x="52" y="90">腕を下ろして、肘を体の横へ</text>
+  <circle class="body" cx="239" cy="126" r="35"/><rect class="body" x="188" y="165" width="102" height="112" rx="40"/>
+  <line class="limb" x1="198" y1="188" x2="145" y2="285"/><line class="limb" x1="280" y1="188" x2="333" y2="285"/>
+  <circle class="joint" cx="170" cy="240" r="9"/><circle class="joint" cx="308" cy="240" r="9"/>
+  <line class="limb" x1="216" y1="275" x2="195" y2="357"/><line class="limb" x1="262" y1="275" x2="283" y2="357"/>
+  <g class="db" transform="translate(116 278)"><rect x="0" y="10" width="58" height="12" rx="6"/><rect x="-8" y="2" width="13" height="28" rx="4"/><rect x="53" y="2" width="13" height="28" rx="4"/></g>
+  <g class="db" transform="translate(304 278)"><rect x="0" y="10" width="58" height="12" rx="6"/><rect x="-8" y="2" width="13" height="28" rx="4"/><rect x="53" y="2" width="13" height="28" rx="4"/></g>
+  <text class="label" x="534" y="62">② 上げる</text><text class="note" x="534" y="90">肘は動かさず、ダンベルを肩へ</text>
+  <circle class="body" cx="721" cy="126" r="35"/><rect class="body" x="670" y="165" width="102" height="112" rx="40"/>
+  <line class="limb" x1="680" y1="188" x2="642" y2="240"/><line class="limb" x1="762" y1="188" x2="800" y2="240"/>
+  <line class="limb" x1="642" y1="240" x2="626" y2="169"/><line class="limb" x1="800" y1="240" x2="816" y2="169"/>
+  <circle class="joint" cx="642" cy="240" r="10"/><circle class="joint" cx="800" cy="240" r="10"/>
+  <line class="limb" x1="698" y1="275" x2="677" y2="357"/><line class="limb" x1="744" y1="275" x2="765" y2="357"/>
+  <g class="db" transform="translate(591 150)"><rect x="0" y="10" width="58" height="12" rx="6"/><rect x="-8" y="2" width="13" height="28" rx="4"/><rect x="53" y="2" width="13" height="28" rx="4"/></g>
+  <g class="db" transform="translate(793 150)"><rect x="0" y="10" width="58" height="12" rx="6"/><rect x="-8" y="2" width="13" height="28" rx="4"/><rect x="53" y="2" width="13" height="28" rx="4"/></g>
+  <path class="arrow" d="M574 287C548 236 557 189 585 157"/><path class="arrow" d="M868 287C894 236 885 189 857 157"/>
+  <text class="title" x="480" y="405" text-anchor="middle">肘の位置を固定 → 前腕だけ曲げる</text>
+</svg>
