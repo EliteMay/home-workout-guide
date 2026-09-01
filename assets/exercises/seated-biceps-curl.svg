@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" aria-labelledby="title desc">
+  <title id="title">座ってダンベルカール</title>
+  <desc id="desc">安定した椅子に座り、足裏を床につけ、肘を体の横に保ったままダンベルを肩へ近づける。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#79d7a5"/></marker>
+    <style>.bg{fill:#11151b}.panel{fill:#171a21;stroke:#2b323d;stroke-width:2}.body{fill:#dce4eb}.limb{stroke:#dce4eb;stroke-width:23;stroke-linecap:round}.chair{fill:none;stroke:#8995a3;stroke-width:15;stroke-linecap:round;stroke-linejoin:round}.db{fill:#79d7a5}.label{fill:#79d7a5;font:800 21px system-ui,sans-serif}.note{fill:#aeb7c4;font:600 18px system-ui,sans-serif}.arrow{fill:none;stroke:#79d7a5;stroke-width:8;stroke-linecap:round;marker-end:url(#arrow)}</style>
+  </defs>
+  <rect class="bg" width="960" height="420" rx="24"/><rect class="panel" x="24" y="24" width="430" height="372" rx="20"/><rect class="panel" x="506" y="24" width="430" height="372" rx="20"/>
+  <text class="label" x="52" y="62">① 開始</text><text class="note" x="52" y="90">背すじを立て、足裏を床へ</text>
+  <path class="chair" d="M130 190V330M130 260H300M300 260V340"/>
+  <circle class="body" cx="225" cy="120" r="33"/><rect class="body" x="183" y="155" width="84" height="100" rx="34"/>
+  <line class="limb" x1="190" y1="178" x2="160" y2="275"/><line class="limb" x1="260" y1="178" x2="290" y2="275"/>
+  <line class="limb" x1="205" y1="248" x2="180" y2="330"/><line class="limb" x1="245" y1="248" x2="270" y2="330"/>
+  <g class="db"><rect x="132" y="268" width="56" height="14" rx="7"/><rect x="124" y="260" width="14" height="30" rx="4"/><rect x="182" y="260" width="14" height="30" rx="4"/><rect x="262" y="268" width="56" height="14" rx="7"/><rect x="254" y="260" width="14" height="30" rx="4"/><rect x="312" y="260" width="14" height="30" rx="4"/></g>
+  <text class="label" x="534" y="62">② 曲げる</text><text class="note" x="534" y="90">肘を前に出さず、肩へ近づける</text>
+  <path class="chair" d="M612 190V330M612 260H782M782 260V340"/>
+  <circle class="body" cx="707" cy="120" r="33"/><rect class="body" x="665" y="155" width="84" height="100" rx="34"/>
+  <line class="limb" x1="672" y1="178" x2="645" y2="225"/><line class="limb" x1="645" y1="225" x2="625" y2="164"/><line class="limb" x1="742" y1="178" x2="769" y2="225"/><line class="limb" x1="769" y1="225" x2="789" y2="164"/>
+  <line class="limb" x1="687" y1="248" x2="662" y2="330"/><line class="limb" x1="727" y1="248" x2="752" y2="330"/>
+  <g class="db"><rect x="597" y="153" width="56" height="14" rx="7"/><rect x="589" y="145" width="14" height="30" rx="4"/><rect x="647" y="145" width="14" height="30" rx="4"/><rect x="761" y="153" width="56" height="14" rx="7"/><rect x="753" y="145" width="14" height="30" rx="4"/><rect x="811" y="145" width="14" height="30" rx="4"/></g>
+  <path class="arrow" d="M575 285C545 245 548 199 584 164"/><path class="arrow" d="M839 285C869 245 866 199 830 164"/>
+  <text class="note" x="480" y="396" text-anchor="middle">力こぶに効く / 手首は前腕と一直線</text>
+</svg>
