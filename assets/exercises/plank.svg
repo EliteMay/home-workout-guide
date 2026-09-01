@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" aria-labelledby="title desc">
+  <title id="title">プランクの正しい姿勢とよくあるNG</title>
+  <desc id="desc">左に頭からかかとまでを一直線にした正しいプランク姿勢。右に腰が落ちる例と、お尻が上がりすぎる例を示す。</desc>
+  <defs>
+    <style>
+      .panel{fill:#171a21;stroke:#2b323d;stroke-width:2}.label{fill:#79d7a5;font:800 21px system-ui,sans-serif}.bad{fill:#e47c7c;font:800 19px system-ui,sans-serif}.note{fill:#aeb7c4;font:600 18px system-ui,sans-serif}.limb{stroke:#dce4eb;stroke-width:24;stroke-linecap:round;stroke-linejoin:round}.head{fill:#dce4eb}.floor{stroke:#46505d;stroke-width:5;stroke-linecap:round}.goodline{stroke:#79d7a5;stroke-width:8;stroke-linecap:round}.badline{stroke:#e47c7c;stroke-width:7;stroke-linecap:round;stroke-dasharray:9 8}.tip{fill:#f2f4f7;font:800 22px system-ui,sans-serif}
+    </style>
+  </defs>
+  <rect width="960" height="420" rx="24" fill="#11151b"/>
+  <rect class="panel" x="24" y="24" width="540" height="372" rx="20"/>
+  <rect class="panel" x="588" y="24" width="348" height="176" rx="20"/>
+  <rect class="panel" x="588" y="220" width="348" height="176" rx="20"/>
+
+  <text class="label" x="52" y="62">○ 正しい姿勢</text>
+  <text class="note" x="52" y="90">頭・背中・お尻・かかとをほぼ一直線に</text>
+  <line class="floor" x1="76" y1="322" x2="522" y2="322"/>
+  <circle class="head" cx="126" cy="194" r="27"/>
+  <line class="limb" x1="151" y1="201" x2="289" y2="232"/>
+  <line class="limb" x1="289" y1="232" x2="435" y2="266"/>
+  <line class="limb" x1="196" y1="211" x2="167" y2="269"/>
+  <line class="limb" x1="167" y1="269" x2="130" y2="315"/>
+  <line class="limb" x1="435" y1="266" x2="486" y2="315"/>
+  <line class="goodline" x1="145" y1="198" x2="442" y2="267"/>
+  <text class="note" x="82" y="356">肘は肩のほぼ真下 / 腹部を締める</text>
+
+  <text class="bad" x="612" y="54">× 腰が落ちる</text>
+  <line class="floor" x1="612" y1="178" x2="910" y2="178"/>
+  <circle class="head" cx="642" cy="104" r="18"/>
+  <line class="limb" x1="660" y1="110" x2="741" y2="142"/>
+  <line class="limb" x1="741" y1="142" x2="845" y2="122"/>
+  <line class="limb" x1="700" y1="125" x2="674" y2="174"/>
+  <line class="limb" x1="845" y1="122" x2="884" y2="174"/>
+  <path class="badline" d="M656 108C702 120 724 150 759 153C794 155 818 128 850 122"/>
+
+  <text class="bad" x="612" y="250">× お尻が高すぎる</text>
+  <line class="floor" x1="612" y1="374" x2="910" y2="374"/>
+  <circle class="head" cx="642" cy="310" r="18"/>
+  <line class="limb" x1="660" y1="316" x2="758" y2="270"/>
+  <line class="limb" x1="758" y1="270" x2="850" y2="328"/>
+  <line class="limb" x1="700" y1="297" x2="674" y2="370"/>
+  <line class="limb" x1="850" y1="328" x2="886" y2="370"/>
+  <path class="badline" d="M656 314L758 268L854 328"/>
+
+  <text class="tip" x="480" y="408" text-anchor="middle">プランクは動かない種目。一直線を保つことが動作そのもの</text>
+</svg>
