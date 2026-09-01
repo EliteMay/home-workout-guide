@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" aria-labelledby="title desc">
+  <title id="title">ダンベルスクワットの開始姿勢と終了姿勢</title>
+  <desc id="desc">左右にダンベルを持って立った開始姿勢から、お尻を後ろへ引きながら膝を曲げてしゃがむ。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0 0L12 6L0 12Z" fill="#79d7a5"/></marker>
+    <style>
+      .panel{fill:#171a21;stroke:#2b323d;stroke-width:2}.title{fill:#f2f4f7;font:700 24px system-ui,sans-serif}.label{fill:#79d7a5;font:800 21px system-ui,sans-serif}.note{fill:#aeb7c4;font:600 18px system-ui,sans-serif}.body{fill:#dce4eb}.limb{stroke:#dce4eb;stroke-width:24;stroke-linecap:round}.db{fill:#79d7a5;stroke:#0f1115;stroke-width:3}.arrow{fill:none;stroke:#79d7a5;stroke-width:8;stroke-linecap:round;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="960" height="420" rx="24" fill="#11151b"/>
+  <rect class="panel" x="24" y="24" width="430" height="372" rx="20"/><rect class="panel" x="506" y="24" width="430" height="372" rx="20"/>
+  <text class="label" x="52" y="62">① 開始</text><text class="note" x="52" y="90">足は肩幅くらい。ダンベルは横</text>
+  <circle class="body" cx="239" cy="126" r="34"/><rect class="body" x="190" y="165" width="98" height="110" rx="38"/>
+  <line class="limb" x1="198" y1="188" x2="153" y2="286"/><line class="limb" x1="280" y1="188" x2="325" y2="286"/>
+  <line class="limb" x1="216" y1="274" x2="198" y2="357"/><line class="limb" x1="262" y1="274" x2="280" y2="357"/>
+  <g class="db" transform="translate(124 282)"><rect x="0" y="10" width="58" height="12" rx="6"/><rect x="-8" y="2" width="13" height="28" rx="4"/><rect x="53" y="2" width="13" height="28" rx="4"/></g>
+  <g class="db" transform="translate(296 282)"><rect x="0" y="10" width="58" height="12" rx="6"/><rect x="-8" y="2" width="13" height="28" rx="4"/><rect x="53" y="2" width="13" height="28" rx="4"/></g>
+  <text class="label" x="534" y="62">② しゃがむ</text><text class="note" x="534" y="90">お尻を後ろへ。かかとは床につける</text>
+  <circle class="body" cx="702" cy="156" r="34"/><path class="body" d="M666 190Q711 177 760 204L742 286Q690 294 651 265Z"/>
+  <line class="limb" x1="672" y1="208" x2="631" y2="278"/><line class="limb" x1="744" y1="214" x2="793" y2="280"/>
+  <line class="limb" x1="682" y1="270" x2="632" y2="302"/><line class="limb" x1="632" y1="302" x2="608" y2="354"/>
+  <line class="limb" x1="730" y1="276" x2="782" y2="306"/><line class="limb" x1="782" y1="306" x2="814" y2="354"/>
+  <g class="db" transform="translate(596 275)"><rect x="0" y="10" width="58" height="12" rx="6"/><rect x="-8" y="2" width="13" height="28" rx="4"/><rect x="53" y="2" width="13" height="28" rx="4"/></g>
+  <g class="db" transform="translate(767 278)"><rect x="0" y="10" width="58" height="12" rx="6"/><rect x="-8" y="2" width="13" height="28" rx="4"/><rect x="53" y="2" width="13" height="28" rx="4"/></g>
+  <path class="arrow" d="M585 150C570 196 577 240 606 276"/><path class="arrow" d="M846 150C860 196 850 240 823 276"/>
+  <path class="arrow" d="M740 188C782 184 812 196 836 215"/>
+  <text class="title" x="480" y="405" text-anchor="middle">3秒かけて下がる → 安定した深さから立つ</text>
+</svg>
