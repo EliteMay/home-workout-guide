@@ -94,6 +94,7 @@ GitHub Pagesで `index.html` を開く前提の静的サイトです。
 - `assets/exercises/push-up.svg` — 腕立て伏せの開始 / 下げた姿勢図
 - `assets/exercises/bodyweight-squat.svg` — 自重スクワットの開始 / しゃがんだ姿勢図
 - `assets/exercises/plank.svg` — プランクの正しい姿勢 / NG姿勢図
+- `PROJECT_LEARNINGS.md` — このProjectで再発させたくないVisual失敗と成功候補
 - `README.md` — 現在仕様と更新時の基準
 
 ## Project
