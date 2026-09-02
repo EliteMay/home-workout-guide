@@ -20,15 +20,18 @@
 - 各種目のフォーム図、主に効く筋肉、回数目安、注意点
 - 筋肉痛・張りがある日の考え方
 - 3kgが軽くなってきた場合の進め方
+- Light / Dark theme切替
 - 一般向け医療・公的情報への参考リンク
 
 ## 使い方
 
 GitHub Pagesで `index.html` を開く前提の静的サイトです。
 
-ページ上部で基本メニューを確認し、上部ナビから「ダンベル / 座って / 自重 / 回復」へ移動できます。
+ページ上部には **3kg × 2 基本メニュー**を置き、4種目と回数をすぐ確認できます。上部ナビから「ダンベル / 座って / 自重 / 回復」へ移動できます。
 
 各種目では、**フォーム画像 → 種目名 / 回数 → 効いている場所 → 詳しい手順 → 痛み・フォーム注意**の順で確認できます。
+
+テーマはOSのLight / Dark設定を初期値として使い、ヘッダー右端の切替で手動変更できます。手動選択は`localStorage`の`home-workout-theme`へ保存し、次回も維持します。保存できない環境でも、そのページを開いている間の切替は利用できます。
 
 座位メニューは、キャスターなし・ぐらつかない椅子を使い、足裏が床につく状態で行うことを前提にしています。ショルダープレスでは背もたれのある椅子を優先し、3kgを両手で持つのが重い場合は片手ずつに切り替えます。
 
@@ -50,7 +53,7 @@ GitHub Pagesで `index.html` を開く前提の静的サイトです。
 
 ### Domain Research
 
-2026-09-02のVisual修正では、過去Projectの成功例を先に当てはめず、同じFitness / Workout用途をWebで調査しています。
+2026-09-02のVisual修正では、過去Projectの成功例を先に当てはめず、Fitness / Workout用途をWebで調査しています。
 
 参考にした用途上の原理:
 
@@ -69,26 +72,33 @@ GitHub Pagesで `index.html` を開く前提の静的サイトです。
 **KEEP**
 
 - Userから「だいぶわかりやすくなった」と評価された開始→終了フォーム図
-- 3kgダンベル2個 / 自重 / 座位という分かりやすいカテゴリ
+- 3kgダンベル2個 / 自重 / 座位というカテゴリ
 - 「効いている場所」と「関節痛はNG」の安全上の区別
-- 緑を主Accentにする健康的なIdentity
+- 緑を主AccentにするIdentity
+- Exercise imageを最初に見せる現在のCard順序
 
-**FIX**
+**FIX済み / 継続確認**
 
-- 種目説明よりHero / Section decorationが強くならないようにする
-- 長いページでもExercise image / reps / target muscleを先に読めるHierarchy
-- Desktop / Mobileで情報密度を調整する
+- `HW`の角丸ロゴ箱と`BEGINNER GUIDE`を表示から除外し、文字だけのHeaderへ変更
+- Header navigationをPill Button型から普通のText navigationへ変更
+- Light themeだけでなくDark themeを追加
+- HeroをMarketing copyより「3kg×2で今日やる4種目」へ寄せる
+- Quick Startを実際の回数が読めるWorkout Boardへ変更
 
 **REMOVE / 表示を弱める**
 
 - FPS / Technical Manualを連想させるSticky Rail
 - 章番号、coded label、過度な英字Kicker
+- 意味の薄いSquare logo / subtitleセット
 - Cardを追加するだけの同型Section反復
+
+User feedbackではExercise-first方向は「悪くない」ものの、まだ「ここが良い」と言える強いVisual validationには到達していません。現段階では成功Directionへ昇格させず、Workout BoardがこのProject固有のSignatureとして機能するか継続確認します。
 
 ## 崩してはいけない仕様
 
 - GitHub Pagesだけで動く静的構成を維持する。
-- 外部JavaScriptや外部サービスを必須にしない。
+- 外部ライブラリや外部サービスを必須にしない。
+- Theme切替が失敗しても運動情報の閲覧を妨げない。
 - 運動フォーム図はサイト単体で表示できる構成にする。
 - フォーム図は初心者が「どこからどこへ動かすか」を見て理解できるものにする。
 - 静止種目は、動作図より正しい姿勢 / NG姿勢の比較を優先してよい。
@@ -113,8 +123,9 @@ GitHub Pagesで `index.html` を開く前提の静的サイトです。
 
 ## ファイル構成
 
-- `index.html` — 本文、Navigation、Exercise / Safety / Recovery構造
-- `styles.css` — Exercise-first UI、Typography、Responsive、Accessibility
+- `index.html` — 本文、Navigation、Workout Board、Theme toggle、Exercise / Safety / Recovery構造
+- `styles.css` — Light / Dark theme、Exercise-first UI、Typography、Responsive、Accessibility
+- `theme.js` — Theme切替、OS theme連動、ユーザー選択保存、`theme-color`同期
 - `assets/exercises/*.svg` — 各種目の開始 / 終了または正解 / NGフォーム図
 - `PROJECT_LEARNINGS.md` — Visual失敗・成功候補・再発防止
 - `README.md` — 現在仕様と更新時の基準
@@ -124,7 +135,7 @@ GitHub Pagesで `index.html` を開く前提の静的サイトです。
 - Profiles: `STATIC + PUBLIC-CONTENT`
 - Adopted web-project-guide: `1.13.0`
 - External dependencies: なし
-- Data storage: なし
+- Data storage: Theme preferenceのみ`localStorage`
 
 ## 参考情報
 
@@ -141,6 +152,6 @@ GitHub Pagesで `index.html` を開く前提の静的サイトです。
 - フォーム図は初心者が動きの方向や姿勢を理解するための説明用イラストで、身体の細かな関節角度を医学的に再現するものではありません。
 - 「効いている場所」は主に使われる筋肉の目安で、全員が同じ場所に同じ強さの感覚を持つとは限りません。
 - 座位種目でも体調や可動域によって合わない場合があり、痛みを我慢して続けることは想定していません。
-- CSS構文、Responsive rule、既存HTML classとの整合を静的に確認する。
-- この環境ではGitHub Pagesの最終描画を実ブラウザで確認できていない場合、Visual完成済みとは扱わない。
+- Light / Dark themeは同じInformation hierarchyを保つことを前提とし、Themeごとに別Layoutは持ちません。
+- この環境ではGitHub Pagesの最終描画を実ブラウザで確認できない場合、Visual完成済みとは扱いません。
 - このサイトは一般的な運動情報をまとめたもので、診断、治療、個別のリハビリ指示の代わりではありません。
