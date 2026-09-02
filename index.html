@@ -4,9 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="初心者向けに、自宅でできる自重トレーニング、座ってできる運動、3kgダンベル2個の使い方を画像付きでまとめたガイド">
-  <meta name="theme-color" content="#0b0f0d">
+  <meta name="theme-color" content="#f5f6f3">
   <title>Home Workout Guide</title>
+  <script>
+    try {
+      const savedTheme = localStorage.getItem('home-workout-theme');
+      if (savedTheme === 'light' || savedTheme === 'dark') document.documentElement.dataset.theme = savedTheme;
+    } catch {}
+  </script>
   <link rel="stylesheet" href="styles.css">
+  <script src="theme.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">本文へスキップ</a>
@@ -14,14 +21,17 @@
   <header class="site-topbar" id="top">
     <div class="topbar-inner container">
       <a class="brand" href="#top" aria-label="Home Workout Guide トップへ">
-        <span class="brand-mark" aria-hidden="true">HW</span>
-        <span class="brand-copy"><strong>HOME WORKOUT</strong><small>BEGINNER GUIDE</small></span>
+        <span class="brand-copy"><strong>Home Workout</strong></span>
       </a>
       <nav class="top-nav" aria-label="主要メニュー">
         <a href="#dumbbell">ダンベル</a>
         <a href="#seated">座って</a>
         <a href="#bodyweight">自重</a>
         <a href="#recovery">回復</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="ダークモードに切り替える">
+          <span class="theme-toggle-icon" data-theme-icon aria-hidden="true">☾</span>
+          <span data-theme-label>ダーク</span>
+        </button>
       </nav>
     </div>
   </header>
@@ -30,29 +40,26 @@
     <div class="intro-grid container">
       <div class="intro-copy">
         <p class="eyebrow">3 KG × 2 / BODYWEIGHT / SEATED</p>
-        <h1 id="page-title">今日やる運動を、<br>迷わず選べる。</h1>
-        <p class="lead">3kgダンベル2個と自重でできる初心者向けガイド。フォーム画像、効いている場所、回数、痛みの見分け方を1ページに整理しています。</p>
+        <h1 id="page-title">3kgダンベル2個。<br>まずはこの4種目。</h1>
+        <p class="lead">フォーム画像を見ながら、回数と効く場所を確認してそのまま始められるようにまとめています。座ってやる日と自重メニューも下にあります。</p>
         <div class="intro-actions">
-          <a class="action primary" href="#dumbbell">立ってダンベルをやる</a>
-          <a class="action secondary" href="#seated">座ってやる</a>
-        </div>
-        <div class="intro-tags" aria-label="このサイトの特徴">
-          <span>画像で確認</span><span>3kg×2対応</span><span>手首の痛み注意</span><span>初心者向け</span>
+          <a class="action primary" href="#dumbbell">4種目のフォームを見る</a>
+          <a class="action secondary" href="#seated">座ってやるメニューへ</a>
         </div>
       </div>
 
       <aside class="today-panel" aria-labelledby="today-title">
         <div class="today-heading">
-          <p>QUICK START</p>
-          <h2 id="today-title">迷ったら今日はこれ</h2>
+          <p>10〜15分 / 2周</p>
+          <h2 id="today-title">3kg × 2 基本メニュー</h2>
         </div>
         <ol class="today-flow">
-          <li><span>01</span><strong>ダンベルカール</strong></li>
-          <li><span>02</span><strong>ショルダープレス</strong></li>
-          <li><span>03</span><strong>ベントオーバーロー</strong></li>
-          <li><span>04</span><strong>ダンベルスクワット</strong></li>
+          <li><span>01</span><strong>ダンベルカール</strong><em>12〜20回</em></li>
+          <li><span>02</span><strong>ショルダープレス</strong><em>8〜15回</em></li>
+          <li><span>03</span><strong>ベントオーバーロー</strong><em>15〜25回</em></li>
+          <li><span>04</span><strong>ダンベルスクワット</strong><em>15〜25回</em></li>
         </ol>
-        <p>各種目カードの回数で1周 → 1〜2分休憩 → もう1周。</p>
+        <p>1周したら1〜2分休憩して、もう1周。フォームが崩れたら回数より先に終了。</p>
         <a href="#dumbbell">フォームを確認する <span aria-hidden="true">→</span></a>
       </aside>
     </div>
