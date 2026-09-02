@@ -66,6 +66,35 @@
 - Related Commit: `19288b03b360d4b9a092312ab993f8f5199e8a79`
 - Guide candidate: no
 
+### PL-F-005 Square Logo + Subtitleが典型的なAI Headerに見えた
+
+- Date: 2026-09-02
+- Status: resolved / visual validation待ち
+- Severity: medium
+- Cost: low
+- Symptom: 左上に角丸の`HW` Logo Box、横に`HOME WORKOUT`、さらに小さい`BEGINNER GUIDE`を並べたHeaderが「AI感がえぐい」「ダサい」と評価された。
+- Expected: Site内容を邪魔せず、既視感の強いAI Template Headerに見えない。
+- Actual: Icon Box + Product Name + Tiny Subtitleという、用途との関係が薄いBrand Shellを置いていた。
+- Root Cause: Site固有IdentityをExercise / Workout contentから作らず、Generic Product Header componentで補おうとした。
+- Final Fix: Logo BoxとSubtitleを削除し、文字だけの`Home Workout` + plain text navigationへ変更。Headerの装飾よりWorkout BoardへVisual emphasisを移動した。
+- Detection method: User supplied screenshot + feedback「この形ダサい」「AI感がえぐい」。
+- Regression Guard: Projectに実在Logo / Brand markがない場合、意味のないInitial Boxを自動生成しない。
+- Prevention: SignatureはHeader OrnamentではなくPrimary Task / Contentから作る。
+- Guide candidate: yes
+
+### PL-F-006 Light UIなのにDark Modeがなかった
+
+- Date: 2026-09-02
+- Status: resolved
+- Severity: low
+- Cost: low
+- Symptom: Light themeを採用したが、Dark modeの選択肢がなかった。
+- Expected: LightをDefault candidateとして使う場合でも、Dark環境で無理なく閲覧できる。
+- Final Fix: `prefers-color-scheme`を初期値にし、手動Light / Dark切替と`localStorage`保存を追加。
+- Affected files / systems: `index.html`, `styles.css`, `theme.js`
+- Regression Guard: Theme追加時はText / Surface / Border / Semantic ColorをTokenで切り替え、Light専用hardcodeを増やさない。
+- Guide candidate: no
+
 ---
 
 ## Success / Candidate
@@ -94,15 +123,16 @@
 ### PL-S-003 Exercise-first Workout Board
 
 - Date: 2026-09-02
-- Status: candidate / user validation待ち
+- Status: partial acceptance / strong validation未到達
 - Goal / Problem: 種目を探して実行するTaskを、装飾や説明より先に見せる。
-- Adopted Pattern: Fitness domain research → Image-first Exercise Card → reps chip → target muscle → steps。章番号 / coded labelを表示上除去し、Safety / Prep / RecoveryはExercise Cardと別Semanticへ分ける。
+- Adopted Pattern: Fitness domain research → Image-first Exercise Card → reps chip → target muscle → steps。Safety / Prep / RecoveryはExercise Cardと別Semanticへ分ける。
 - Research Basis: Hevy Exercise Library / Nike Training Club / Fitbod Exercise Guideの共通点を、BrandではなくTask単位で抽象化。
-- Why it may work: UserのPrimary Task「画像を見る → 回数 / 効く場所を確認 → やる」と視線順を一致させる。
+- User Feedback: 全体について「悪くない」。一方で「悪いところはないが、いいところもない」と評価され、固有Signature不足が残った。
+- Current refinement: Generic Header Ornamentを削除し、First Viewの`3kg × 2 基本メニュー`を実用的なWorkout Boardとして強化。Light / Dark両対応を追加。
 - Trade-off: 既存SVGがDark previewなので、Light UI内ではExercise previewとして意図的に分離して見せる。
-- Reuse when: Userから肯定的Visual feedbackが得られた場合、このProject内で維持する。
-- Avoid when: 再度Visual違和感が出た場合は、小さなPolishを重ねずFitness Editorial / Workout Plannerなど別構造と比較する。
-- Related files: `styles.css`, `README.md`
+- Reuse when: Userから明確な肯定Feedbackが得られた場合、このProject内で維持する。
+- Avoid when: 再度「普通」「特徴がない」と評価された場合は、Decoration追加ではなくWorkout Board / Exercise imagery自体のSignatureを再検討する。
+- Related files: `index.html`, `styles.css`, `theme.js`, `README.md`
 
 ---
 
@@ -112,4 +142,5 @@
 |---|---|---|---|---|
 | HWG-VIS-001 | rejected | Tarkov / Field Manual系Directionの題材Mismatch | User feedback「FPS感がある」 | Domain-first ruleのEvidenceとして維持 |
 | HWG-VIS-002 | superseded | Light Fitness App化だけでは不足 | 再度Visual修正依頼 | Theme変更とStructure変更を分離して評価 |
-| HWG-VIS-003 | success candidate | Exercise-first Workout Board | Domain research + commit `19288b0` | User feedback後に維持 / 再設計を判断 |
+| HWG-VIS-003 | partial candidate | Exercise-first Workout Board | User feedback「悪くない」「いいところもない」 | Header genericityを除去し、Task由来Signatureを検証 |
+| HWG-VIS-004 | failure | 意味のないInitial Logo BoxがAI Template感を強めた | Screenshot +「AI感がえぐい」 | Generic Brand Shellを自動生成しないRule候補 |
