@@ -16,10 +16,8 @@
   - 座ってショルダープレス
   - 座って膝伸ばし
   - 座ってもも上げ
-- 腕立て伏せ（Push-up）のフォーム図
-- 自重スクワット（Squat）のフォーム図
-- プランク（Plank）の正しい姿勢 / NG姿勢図
-- 各種目で主に疲れ・張りを感じやすい筋肉
+- 腕立て伏せ / 自重スクワット / プランク
+- 各種目のフォーム図、主に効く筋肉、回数目安、注意点
 - 筋肉痛・張りがある日の考え方
 - 3kgが軽くなってきた場合の進め方
 - 一般向け医療・公的情報への参考リンク
@@ -28,33 +26,64 @@
 
 GitHub Pagesで `index.html` を開く前提の静的サイトです。
 
-ページ上部では「迷ったら今日はこれ」を確認し、上部ナビから立位ダンベル・座位・自重・回復へ移動できます。Desktop / Mobileともに、左側へ常設Railを置かず、運動画像と種目選択を主役にします。
+ページ上部で基本メニューを確認し、上部ナビから「ダンベル / 座って / 自重 / 回復」へ移動できます。
 
-各種目は、**フォーム図 → 効いている場所 → 詳しい手順 → 回数目安 → 痛み・フォーム注意**の順で確認できます。
+各種目では、**フォーム画像 → 種目名 / 回数 → 効いている場所 → 詳しい手順 → 痛み・フォーム注意**の順で確認できます。
 
 座位メニューは、キャスターなし・ぐらつかない椅子を使い、足裏が床につく状態で行うことを前提にしています。ショルダープレスでは背もたれのある椅子を優先し、3kgを両手で持つのが重い場合は片手ずつに切り替えます。
 
-「効いている場所」は、正しく行ったときに筋肉の張り・熱さ・疲れを感じやすい場所の目安です。関節の鋭い痛みやしびれは「効いている」とは扱いません。また、翌日に筋肉痛が来ないことだけで効果の有無を判断しません。
+「効いている場所」は、正しく行ったときに筋肉の張り・熱さ・疲れを感じやすい場所の目安です。関節の鋭い痛みやしびれは「効いている」とは扱いません。翌日に筋肉痛が来ないことだけで効果の有無を判断しません。
 
 ## Visual Direction
 
-現在のUIは **Fitness App / Exercise Library** を方向性にしています。
+現在の候補は **Exercise-first Workout Board / Exercise Library** です。
 
-- First Viewで「今日どれをやるか」を先に見せる。
-- 常設の左RailやField Manual風のNavigationは使わず、上部の短いカテゴリNavigationへまとめる。
-- 明るいNeutral backgroundと柔らかいGreen Accentを基本にし、FPS / Tactical / Technical Console風の印象を避ける。
-- ダンベル・座位種目は、独立したExercise Objectとして画像 / 部位 / 回数 / 手順をCardにまとめる。
-- Exercise Cardではフォーム画像を強くし、回数と効く部位を短いChip / Highlightで見つけやすくする。
-- 自重3種目は大きい画像を使ったFeature Layoutを維持する。
-- 回復・進め方はExercise Cardとは別のStatus / Step表現を使う。
-- 既存SVGはユーザーから「だいぶわかりやすくなった」と評価されたためKEEPする。
-- 参考情報は通常利用時のNoiseを減らすため`details`へまとめる。
+### Target Type
 
-Visual Referenceは、Project用途が近い実フィットネスサービスを優先します。HevyのExercise Libraryにある「Exercise image / equipment / target muscle / instruction」を一つのExercise Objectとして扱う考え方と、Nike Training Clubの「Workoutの目的・Sets / Repsを先に理解できる構成」を参考にします。具体的なBrand color、Layout、Assetはコピーしません。
+- Primary Task: 種目を選ぶ → フォーム画像を見る → 回数と効く場所を確認 → 実行する
+- Content Model: 少数のExercise collection + Safety / Recovery guidance
+- Audience: 筋トレ初心者 / 自分用
+- Density: medium
+- Device: Desktop + Mobile
+- Primary Visual Material: フォーム図
+- Tone: 親しみやすい / 健康的 / 落ち着いた
 
-以前試した **Training Manual / Sticky Rail** 方向は、Userから「FPS感があり、このサイトには違う」と評価されたためRejected Evidenceとして扱い、現在Directionへ再利用しません。
+### Domain Research
 
-現時点では新しいFitness App方向もUser Visual Validation待ちであり、別Projectへ成功例として一般化しません。
+2026-09-02のVisual修正では、過去Projectの成功例を先に当てはめず、同じFitness / Workout用途をWebで調査しています。
+
+参考にした用途上の原理:
+
+- **Hevy Exercise Library** — ExerciseごとにDemo / Equipment / Muscle target / Instructionsをまとめ、Exercise自体を主役にする。
+- **Nike Training Club** — Workoutの目的、sets / reps、必要に応じたdrill demonstrationを分かりやすく提示する。
+- **Fitbod Exercise Guide** — Exercise demonstrationとstep-by-step guidanceを近くに置く。
+
+コピーしないもの:
+
+- 各Service固有のBrand color / Font / Marketing Hero
+- Tracking / Account / Social / Recommendation等、このSiteに存在しない機能
+- Mobile AppのNavigationをそのままWebへ移すこと
+
+### Current UIの判断
+
+**KEEP**
+
+- Userから「だいぶわかりやすくなった」と評価された開始→終了フォーム図
+- 3kgダンベル2個 / 自重 / 座位という分かりやすいカテゴリ
+- 「効いている場所」と「関節痛はNG」の安全上の区別
+- 緑を主Accentにする健康的なIdentity
+
+**FIX**
+
+- 種目説明よりHero / Section decorationが強くならないようにする
+- 長いページでもExercise image / reps / target muscleを先に読めるHierarchy
+- Desktop / Mobileで情報密度を調整する
+
+**REMOVE / 表示を弱める**
+
+- FPS / Technical Manualを連想させるSticky Rail
+- 章番号、coded label、過度な英字Kicker
+- Cardを追加するだけの同型Section反復
 
 ## 崩してはいけない仕様
 
@@ -70,7 +99,6 @@ Visual Referenceは、Project用途が近い実フィットネスサービスを
 - 小さい画面とキーボード操作でも主要情報へ到達できる状態を保つ。
 - 手首などに痛みが出る種目を、我慢して継続するよう案内しない。
 - Visual変更時も、既存の運動内容・安全注意・画像Assetを理由なく削除しない。
-- 別ProjectのValidated Directionを、そのProject固有の雰囲気ごと持ち込まない。
 
 ## 基本ルール
 
@@ -85,26 +113,16 @@ Visual Referenceは、Project用途が近い実フィットネスサービスを
 
 ## ファイル構成
 
-- `index.html` — Workoutカテゴリ、Quick Start、各Exercise情報、フォーム図への参照
-- `styles.css` — Fitness App / Exercise Library方向のLayout、Typography、Exercise Card、Responsive、Accessibility
-- `assets/exercises/dumbbell-curl.svg` — ダンベルカールの開始 / 終了図
-- `assets/exercises/shoulder-press.svg` — ショルダープレスの開始 / 終了図
-- `assets/exercises/bent-over-row.svg` — ベントオーバーローの開始 / 終了図
-- `assets/exercises/dumbbell-squat.svg` — ダンベルスクワットの開始 / 終了図
-- `assets/exercises/seated-biceps-curl.svg` — 座ってダンベルカールの開始 / 終了図
-- `assets/exercises/seated-shoulder-press.svg` — 座ってショルダープレスの開始 / 終了図
-- `assets/exercises/seated-knee-extension.svg` — 座って膝伸ばしの開始 / 終了図
-- `assets/exercises/seated-march.svg` — 座ってもも上げの開始 / 終了図
-- `assets/exercises/push-up.svg` — 腕立て伏せの開始 / 下げた姿勢図
-- `assets/exercises/bodyweight-squat.svg` — 自重スクワットの開始 / しゃがんだ姿勢図
-- `assets/exercises/plank.svg` — プランクの正しい姿勢 / NG姿勢図
-- `PROJECT_LEARNINGS.md` — このProjectで再発させたくないVisual失敗と成功候補
+- `index.html` — 本文、Navigation、Exercise / Safety / Recovery構造
+- `styles.css` — Exercise-first UI、Typography、Responsive、Accessibility
+- `assets/exercises/*.svg` — 各種目の開始 / 終了または正解 / NGフォーム図
+- `PROJECT_LEARNINGS.md` — Visual失敗・成功候補・再発防止
 - `README.md` — 現在仕様と更新時の基準
 
 ## Project
 
 - Profiles: `STATIC + PUBLIC-CONTENT`
-- Adopted web-project-guide: `1.11.0`
+- Adopted web-project-guide: `1.13.0`
 - External dependencies: なし
 - Data storage: なし
 
@@ -123,6 +141,6 @@ Visual Referenceは、Project用途が近い実フィットネスサービスを
 - フォーム図は初心者が動きの方向や姿勢を理解するための説明用イラストで、身体の細かな関節角度を医学的に再現するものではありません。
 - 「効いている場所」は主に使われる筋肉の目安で、全員が同じ場所に同じ強さの感覚を持つとは限りません。
 - 座位種目でも体調や可動域によって合わない場合があり、痛みを我慢して続けることは想定していません。
-- `index.html`内には旧Training RailのHTMLが残っていますが、現行CSSでは非表示です。将来HTMLを整理するときは内容・Anchorを壊さず削除できます。
-- この環境ではGitHub Pagesの最終描画を実ブラウザで確認できていないため、Visual最終確認は未完了です。
+- CSS構文、Responsive rule、既存HTML classとの整合を静的に確認する。
+- この環境ではGitHub Pagesの最終描画を実ブラウザで確認できていない場合、Visual完成済みとは扱わない。
 - このサイトは一般的な運動情報をまとめたもので、診断、治療、個別のリハビリ指示の代わりではありません。
