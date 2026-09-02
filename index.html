@@ -4,255 +4,259 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="初心者向けに、自宅でできる自重トレーニング、座ってできる運動、3kgダンベル2個の使い方を画像付きでまとめたガイド">
-  <meta name="theme-color" content="#0f1115">
+  <meta name="theme-color" content="#0b0f0d">
   <title>Home Workout Guide</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <a class="skip-link" href="#main-content">本文へスキップ</a>
 
-  <header class="hero">
-    <div class="container">
-      <p class="eyebrow">HOME WORKOUT GUIDE</p>
-      <h1>フォーム優先で、無理なく続ける。</h1>
-      <p class="lead">自重トレーニング、座ってできる運動、3kgダンベル2個のメニューを、開始姿勢・終了姿勢・効いている場所と一緒に確認できます。</p>
-      <nav class="quick-nav" aria-label="主要メニュー">
-        <a href="#before">始める前</a>
-        <a href="#dumbbell">3kgダンベル</a>
+  <header class="site-topbar" id="top">
+    <div class="topbar-inner container">
+      <a class="brand" href="#top" aria-label="Home Workout Guide トップへ">
+        <span class="brand-mark" aria-hidden="true">HW</span>
+        <span class="brand-copy"><strong>HOME WORKOUT</strong><small>BEGINNER GUIDE</small></span>
+      </a>
+      <nav class="top-nav" aria-label="主要メニュー">
+        <a href="#dumbbell">ダンベル</a>
         <a href="#seated">座って</a>
-        <a href="#pushup">腕立て</a>
-        <a href="#squat">スクワット</a>
-        <a href="#plank">プランク</a>
+        <a href="#bodyweight">自重</a>
         <a href="#recovery">回復</a>
-        <a href="#routine">進め方</a>
       </nav>
     </div>
   </header>
 
-  <main id="main-content" class="container" tabindex="-1">
-    <section class="notice" aria-labelledby="first-title">
-      <h2 id="first-title">最初に見るポイント</h2>
-      <div class="rules-grid">
-        <article><strong>回数よりフォーム</strong><span>崩れ始めたら、そのセットは終了。</span></article>
-        <article><strong>筋肉の疲れはOK</strong><span>使っている筋肉の張り・熱さ・だるさは出ることがある。</span></article>
-        <article><strong>関節の痛みはNG</strong><span>手首・肘・肩・膝・腰などの鋭い痛みは「効いている」と考えない。</span></article>
-        <article><strong>呼吸を止めない</strong><span>力んでも、自然な呼吸を続ける。</span></article>
+  <section class="intro-band" aria-labelledby="page-title">
+    <div class="intro-grid container">
+      <div class="intro-copy">
+        <p class="eyebrow">3 KG × 2 / BODYWEIGHT / SEATED</p>
+        <h1 id="page-title">今日やる運動を、<br>迷わず選べる。</h1>
+        <p class="lead">3kgダンベル2個と自重でできる初心者向けガイド。フォーム画像、効いている場所、回数、痛みの見分け方を1ページに整理しています。</p>
+        <div class="intro-actions">
+          <a class="action primary" href="#dumbbell">立ってダンベルをやる</a>
+          <a class="action secondary" href="#seated">座ってやる</a>
+        </div>
+        <div class="intro-tags" aria-label="このサイトの特徴">
+          <span>画像で確認</span><span>3kg×2対応</span><span>手首の痛み注意</span><span>初心者向け</span>
+        </div>
       </div>
-      <div class="sensation-key">
-        <div class="sensation-ok"><strong>○ 正しく効いている感覚</strong><span>筋肉がじわっと張る、熱くなる、重くなる、最後の数回がきつくなる。</span></div>
-        <div class="sensation-ng"><strong>× 中止する痛み</strong><span>関節の鋭い痛み、ピリッとする痛み、しびれ、強い腫れ、フォームを変えないと続けられない痛み。</span></div>
-      </div>
-      <p class="footnote">翌日に筋肉痛が来なくても、トレーニングが無意味だったとは限りません。筋肉痛の強さを成果の基準にしないでください。</p>
-    </section>
 
-    <section id="before" class="exercise">
-      <div class="section-heading">
-        <p class="tag">BEFORE YOU START</p>
-        <h2>始める前</h2>
-        <p>いきなり限界までやらず、痛みなく動ける範囲を確認してから始めます。</p>
+      <aside class="today-panel" aria-labelledby="today-title">
+        <div class="today-heading">
+          <p>QUICK START</p>
+          <h2 id="today-title">迷ったら今日はこれ</h2>
+        </div>
+        <ol class="today-flow">
+          <li><span>01</span><strong>ダンベルカール</strong></li>
+          <li><span>02</span><strong>ショルダープレス</strong></li>
+          <li><span>03</span><strong>ベントオーバーロー</strong></li>
+          <li><span>04</span><strong>ダンベルスクワット</strong></li>
+        </ol>
+        <p>各種目カードの回数で1周 → 1〜2分休憩 → もう1周。</p>
+        <a href="#dumbbell">フォームを確認する <span aria-hidden="true">→</span></a>
+      </aside>
+    </div>
+  </section>
+
+  <div class="page-shell container">
+    <aside class="section-rail" aria-label="ページ内目次">
+      <div class="rail-sticky">
+        <p class="rail-label">TRAINING INDEX</p>
+        <nav class="rail-nav">
+          <a href="#before"><span>00</span><strong>始める前</strong></a>
+          <a href="#dumbbell"><span>01</span><strong>立ってダンベル</strong></a>
+          <a href="#seated"><span>02</span><strong>座ってできる</strong></a>
+          <a href="#pushup"><span>03</span><strong>腕立て</strong></a>
+          <a href="#squat"><span>04</span><strong>スクワット</strong></a>
+          <a href="#plank"><span>05</span><strong>プランク</strong></a>
+          <a href="#recovery"><span>06</span><strong>回復</strong></a>
+          <a href="#routine"><span>07</span><strong>進め方</strong></a>
+        </nav>
+        <div class="rail-legend">
+          <div><i class="dot ok" aria-hidden="true"></i><span>筋肉の張り・熱さ</span></div>
+          <div><i class="dot stop" aria-hidden="true"></i><span>関節の鋭い痛み</span></div>
+        </div>
       </div>
-      <div class="content-grid">
-        <article class="card">
-          <h3>軽く体を動かす</h3>
-          <p>その場歩き、肩回し、浅いスクワットなどを数分。準備運動だけで疲れるほど強くする必要はありません。</p>
+    </aside>
+
+    <main id="main-content" class="manual-content" tabindex="-1">
+      <section id="before" class="chapter safety-chapter" aria-labelledby="before-title">
+        <header class="chapter-heading">
+          <div class="chapter-number">00</div>
+          <div>
+            <p class="chapter-kicker">BEFORE YOU START</p>
+            <h2 id="before-title">「効いてる」と「痛い」を分ける</h2>
+            <p>最初にここだけ確認。回数よりフォームを優先し、関節の痛みを我慢して続けません。</p>
+          </div>
+        </header>
+
+        <div class="signal-board">
+          <article class="signal signal-ok">
+            <div class="signal-icon" aria-hidden="true">○</div>
+            <div><h3>続けてよい感覚</h3><p>使っている筋肉がじわっと張る、熱くなる、重くなる。最後の数回がきつくなる。</p></div>
+          </article>
+          <article class="signal signal-stop">
+            <div class="signal-icon" aria-hidden="true">×</div>
+            <div><h3>中止する痛み</h3><p>手首・肘・肩・膝・腰などの鋭い痛み、ピリッとする痛み、しびれ、強い腫れ。</p></div>
+          </article>
+        </div>
+
+        <div class="prep-list">
+          <div class="prep-item"><span>01</span><div><strong>軽く体を動かす</strong><p>その場歩き、肩回し、浅いスクワットなどを数分。準備運動だけで疲れるほど強くしません。</p></div></div>
+          <div class="prep-item"><span>02</span><div><strong>古いダンベルを確認</strong><p>持ち手・プレートの大きな割れ、外れそうなガタつき、鋭いサビがある場合は使いません。</p></div></div>
+          <div class="prep-item"><span>03</span><div><strong>筋肉痛を成果にしない</strong><p>翌日に筋肉痛が来なくても、トレーニングが無意味だったとは限りません。</p></div></div>
+        </div>
+      </section>
+
+      <section id="dumbbell" class="chapter" aria-labelledby="dumbbell-title">
+        <header class="chapter-heading">
+          <div class="chapter-number">01</div>
+          <div>
+            <p class="chapter-kicker">STANDING / 3 KG × 2</p>
+            <h2 id="dumbbell-title">立ってやるダンベル</h2>
+            <p>肩・腕は3kgでも使いやすく、脚や背中はゆっくり動かすことで負荷を作れます。</p>
+          </div>
+        </header>
+
+        <div class="chapter-notes">
+          <p><strong>図の見方</strong><span>左が開始、右が動かした後。緑のダンベルと矢印を追います。</span></p>
+          <p class="warning-note"><strong>手首が痛む場合</strong><span>同じ場所が痛む種目は中止。握るときは手首を前腕と一直線に。</span></p>
+        </div>
+
+        <div class="movement-grid">
+          <article class="movement-card">
+            <header class="movement-head"><div class="movement-id">01</div><div class="movement-title"><h3>ダンベルカール</h3><p>力こぶ / 上腕二頭筋</p></div><div class="rep-badge">12〜20回 × 2</div></header>
+            <figure class="exercise-visual"><img src="assets/exercises/dumbbell-curl.svg" alt="ダンベルカール。左は腕を下げた開始姿勢、右は肘を固定したままダンベルを肩へ近づけた姿勢。"><figcaption><strong>フォーム：</strong>肘の位置を変えず、前腕だけを上げ下げする。</figcaption></figure>
+            <div class="movement-info"><div class="target-line"><span>効く場所</span><p><strong>力こぶ（上腕の前側）</strong>。後半ほど張る・熱くなる感覚が出やすい。</p></div><ol class="steps"><li>足を肩幅くらいにして左右に1個ずつ持つ。</li><li>肘を体の横に固定する。</li><li>手のひらを前に向け、肩方向へ上げる。</li><li>2〜3秒かけてゆっくり下ろす。</li></ol><p class="movement-caution">手首や肘が鋭く痛むなら中止。</p></div>
+          </article>
+
+          <article class="movement-card">
+            <header class="movement-head"><div class="movement-id">02</div><div class="movement-title"><h3>ショルダープレス</h3><p>肩 / 上腕三頭筋</p></div><div class="rep-badge">8〜15回 × 2</div></header>
+            <figure class="exercise-visual"><img src="assets/exercises/shoulder-press.svg" alt="ショルダープレス。左はダンベルを肩の横に構えた姿勢、右は頭上へ真っすぐ押し上げた姿勢。"><figcaption><strong>フォーム：</strong>肩の横から頭の上へ、真上に押す。</figcaption></figure>
+            <div class="movement-info"><div class="target-line"><span>効く場所</span><p><strong>肩の前〜横・二の腕の後ろ</strong>。肩関節そのものが刺すように痛むのは別。</p></div><ol class="steps"><li>ダンベルを肩の横へ構える。</li><li>お腹に軽く力を入れ、腰を反らしすぎない。</li><li>ダンベルを真上へ押す。</li><li>勢いで落とさず、肩の横まで戻す。</li></ol><p class="movement-caution">腰が反るなら回数を減らす。</p></div>
+          </article>
+
+          <article class="movement-card">
+            <header class="movement-head"><div class="movement-id">03</div><div class="movement-title"><h3>ベントオーバーロー</h3><p>背中 / 肩の後ろ</p></div><div class="rep-badge">15〜25回 × 2</div></header>
+            <figure class="exercise-visual"><img src="assets/exercises/bent-over-row.svg" alt="ベントオーバーロー。左は背中をまっすぐにして前傾し腕を下げた姿勢、右は肘を腰の後ろへ引いた姿勢。"><figcaption><strong>フォーム：</strong>ダンベルを上げるより、肘を腰の後ろへ引く。</figcaption></figure>
+            <div class="movement-info"><div class="target-line"><span>効く場所</span><p><strong>肩の後ろ〜肩甲骨まわり・上背部</strong>。腕の前側も補助で疲れることがあります。</p></div><ol class="steps"><li>膝を軽く曲げ、お尻を後ろへ引いて前傾。</li><li>背中を丸めず、ダンベルを真下へ。</li><li>肘を腰の後ろへ引く。</li><li>肩をすくめず、ゆっくり下ろす。</li></ol><p class="movement-caution">腰が痛むならその場で中止して姿勢を確認。</p></div>
+          </article>
+
+          <article class="movement-card">
+            <header class="movement-head"><div class="movement-id">04</div><div class="movement-title"><h3>ダンベルスクワット</h3><p>太もも / お尻</p></div><div class="rep-badge">15〜25回 × 2</div></header>
+            <figure class="exercise-visual"><img src="assets/exercises/dumbbell-squat.svg" alt="ダンベルスクワット。左は左右にダンベルを持って立った姿勢、右はお尻を後ろへ引きながらしゃがんだ姿勢。"><figcaption><strong>フォーム：</strong>真下に沈むより、お尻を後ろへ引きながらしゃがむ。</figcaption></figure>
+            <div class="movement-info"><div class="target-line"><span>効く場所</span><p><strong>太ももの前・後ろ・お尻</strong>。立ち上がる後半で脚とお尻がきつくなります。</p></div><ol class="steps"><li>左右に1個ずつ持ち、足を肩幅前後に。</li><li>お尻を後ろへ引きながら膝を曲げる。</li><li>3秒かけて下がる。</li><li>かかとを床につけたまま立ち上がる。</li></ol><p class="movement-caution">膝や腰の鋭い痛みは「効いている」感覚ではありません。</p></div>
+          </article>
+        </div>
+
+        <div class="round-note"><strong>1周したら</strong><span>1〜2分休憩 → もう1周。最初は4種目だけでOKです。</span></div>
+      </section>
+
+      <section id="seated" class="chapter seated-chapter" aria-labelledby="seated-title">
+        <header class="chapter-heading">
+          <div class="chapter-number">02</div>
+          <div>
+            <p class="chapter-kicker">SEATED WORKOUT</p>
+            <h2 id="seated-title">座ってできるメニュー</h2>
+            <p>床に寝たり、立ち続けたりしたくない日に。ダンベルあり2種目、なし2種目です。</p>
+          </div>
+        </header>
+
+        <div class="chair-rule"><strong>椅子の条件</strong><span>キャスターなし・ぐらつかない椅子。足裏が床につく高さ。ショルダープレスは背もたれがある椅子を優先。</span></div>
+
+        <div class="group-heading"><span>WITH DUMBBELLS</span><h3>3kgダンベルあり</h3><p>重ければ両手同時にやらず、片手ずつ。</p></div>
+        <div class="movement-grid">
+          <article class="movement-card">
+            <header class="movement-head"><div class="movement-id">S1</div><div class="movement-title"><h3>座ってダンベルカール</h3><p>力こぶ / 3kg × 2</p></div><div class="rep-badge">10〜20回 × 2</div></header>
+            <figure class="exercise-visual"><img src="assets/exercises/seated-biceps-curl.svg" alt="椅子に座って行うダンベルカール。左は腕を下げた姿勢、右は肘を体の横に保ったままダンベルを肩へ近づけた姿勢。"><figcaption><strong>フォーム：</strong>背すじを立て、肘を前へ出さずに曲げる。</figcaption></figure>
+            <div class="movement-info"><div class="target-line"><span>効く場所</span><p><strong>力こぶ（上腕の前側）</strong>。立位より反動を使いにくい。</p></div><ol class="steps"><li>椅子に深く座り、足裏を床へ。</li><li>左右にダンベルを持ち、腕を体の横へ。</li><li>肘の位置を変えず肩へ向けて曲げる。</li><li>2〜3秒かけて下ろす。</li></ol><p class="movement-caution">手首は前腕と一直線。</p></div>
+          </article>
+
+          <article class="movement-card">
+            <header class="movement-head"><div class="movement-id">S2</div><div class="movement-title"><h3>座ってショルダープレス</h3><p>肩 / 二の腕 / 3kg × 2</p></div><div class="rep-badge">8〜15回 × 2</div></header>
+            <figure class="exercise-visual"><img src="assets/exercises/seated-shoulder-press.svg" alt="椅子に座って行うショルダープレス。左は肩の横にダンベルを構えた姿勢、右は腰を反らさず頭上へ押し上げた姿勢。"><figcaption><strong>フォーム：</strong>腰を反らさず、肩の横から真上へ押す。</figcaption></figure>
+            <div class="movement-info"><div class="target-line"><span>効く場所</span><p><strong>肩の前〜横・二の腕の後ろ</strong>。肩関節の鋭い痛みはNG。</p></div><ol class="steps"><li>背もたれのある安定した椅子へ。</li><li>ダンベルを肩の横へ、手首はまっすぐ。</li><li>お腹に軽く力を入れて頭上へ押す。</li><li>勢いで落とさず肩まで戻す。</li></ol><p class="movement-caution">3kg×2が重ければ片手ずつ。</p></div>
+          </article>
+        </div>
+
+        <div class="group-heading bodyweight-group"><span>NO DUMBBELLS</span><h3>ダンベルなし</h3><p>テレビや動画を見ながらでもやりやすい脚中心の2種目。</p></div>
+        <div class="movement-grid">
+          <article class="movement-card">
+            <header class="movement-head"><div class="movement-id">S3</div><div class="movement-title"><h3>座って膝伸ばし</h3><p>太ももの前</p></div><div class="rep-badge">左右10〜15回 × 2</div></header>
+            <figure class="exercise-visual"><img src="assets/exercises/seated-knee-extension.svg" alt="椅子に座って行う膝伸ばし。左は両足を床につけた姿勢、右は片膝をゆっくり伸ばした姿勢。"><figcaption><strong>フォーム：</strong>太ももは椅子の上のまま、膝から下だけを前へ伸ばす。</figcaption></figure>
+            <div class="movement-info"><div class="target-line"><span>効く場所</span><p><strong>太ももの前</strong>。脚を伸ばしたときに前側が固くなる感覚が目安。</p></div><ol class="steps"><li>背すじを立て、両足を床へ。</li><li>片脚の膝をゆっくり伸ばす。</li><li>伸ばした位置で1〜2秒止める。</li><li>ゆっくり戻して反対脚も行う。</li></ol><p class="movement-caution">膝が鋭く痛むなら中止。</p></div>
+          </article>
+
+          <article class="movement-card">
+            <header class="movement-head"><div class="movement-id">S4</div><div class="movement-title"><h3>座ってもも上げ</h3><p>股関節まわり / 太もも / 体幹</p></div><div class="rep-badge">左右10〜20回 × 2</div></header>
+            <figure class="exercise-visual"><img src="assets/exercises/seated-march.svg" alt="椅子に座って行うもも上げ。左は両足を床につけた姿勢、右は上体を倒さず片膝を持ち上げた姿勢。"><figcaption><strong>フォーム：</strong>上体を後ろに倒さず、左右の膝を交互に上げる。</figcaption></figure>
+            <div class="movement-info"><div class="target-line"><span>効く場所</span><p><strong>太ももの付け根〜前側</strong>。姿勢を保つためお腹にも軽く力が入ります。</p></div><ol class="steps"><li>椅子に座り足裏を床へ。</li><li>背すじを保ったまま片膝を上げる。</li><li>ゆっくり床へ戻す。</li><li>左右交互に繰り返す。</li></ol><p class="movement-caution">上体を大きく後ろへ倒さない。</p></div>
+          </article>
+        </div>
+
+        <div class="round-note"><strong>座ったままやるなら</strong><span>4種目を1周 → 1〜2分休憩 → もう1周。肩や手首が痛い日は脚2種目だけでもOK。</span></div>
+      </section>
+
+      <section id="bodyweight" class="chapter bodyweight-chapter" aria-labelledby="bodyweight-title">
+        <header class="chapter-heading compact-heading"><div class="chapter-number">03–05</div><div><p class="chapter-kicker">BODYWEIGHT BASICS</p><h2 id="bodyweight-title">自重3種目</h2><p>画像を大きく見ながら、フォームだけ先に確認します。</p></div></header>
+
+        <article id="pushup" class="feature-exercise">
+          <figure class="feature-visual"><img src="assets/exercises/push-up.svg" alt="腕立て伏せ。左は体を一直線にして腕を伸ばした開始姿勢、右は一直線を保ったまま胸を床へ近づけた姿勢。"></figure>
+          <div class="feature-copy"><div class="feature-index">03 / PUSH-UP</div><h3>腕立て伏せ</h3><p class="feature-lead">頭からかかとまでを1本の板みたいに保ったまま、胸を下げて押し戻す。</p><div class="target-line"><span>効く場所</span><p><strong>胸・二の腕の後ろ</strong>。お腹と背中も姿勢を保つために使います。</p></div><ol class="steps"><li>手は肩幅〜少し広め。</li><li>頭からかかとまでをほぼ一直線に。</li><li>肘を真横へ開きすぎない。</li><li>コントロールできる範囲まで胸を下げる。</li></ol><div class="inline-warning"><strong>手首が痛い場合</strong><span>壁腕立てや安定した高い台へ変更。それでも痛むなら腕立ては休む。</span></div></div>
         </article>
-        <article class="card accent-card">
-          <h3>古いダンベルなら先に確認</h3>
-          <p>持ち手・プレートに大きな割れ、外れそうなガタつき、鋭いサビがないか確認。異常がある場合は使いません。</p>
-        </article>
-      </div>
-    </section>
 
-    <section id="dumbbell" class="exercise featured-section">
-      <div class="section-heading">
-        <p class="tag">3 KG × 2 DUMBBELLS</p>
-        <h2>3kgダンベル2個の使い方</h2>
-        <p>3kgでも肩・腕には十分使えます。脚や背中は、ゆっくり動かして回数を増やすと負荷を作れます。</p>
-      </div>
-
-      <div class="visual-guide">
-        <strong>図の見方</strong>
-        <span><b>左が開始姿勢</b>、<b>右が動かした後</b>です。緑のダンベルと矢印を追ってください。</span>
-      </div>
-
-      <div class="wrist-note">
-        <strong>腕立てで手首の小指側が痛む場合</strong>
-        <span>下の種目でも同じ場所が痛んだら、その種目は中止。ダンベルを握るときは手首を曲げず、前腕と一直線にします。</span>
-      </div>
-
-      <div class="dumbbell-grid">
-        <article class="movement-card">
-          <div class="movement-head"><span class="step-number">01</span><div><h3>ダンベルカール</h3><p>力こぶ / 上腕二頭筋</p></div></div>
-          <figure class="exercise-visual">
-            <img src="assets/exercises/dumbbell-curl.svg" alt="ダンベルカール。左は腕を下げた開始姿勢、右は肘を固定したままダンベルを肩へ近づけた姿勢。">
-            <figcaption><strong>ここだけ覚える：</strong>肘の位置を変えず、前腕だけを上げ下げする。</figcaption>
-          </figure>
-          <div class="feel-target"><strong>効いている場所</strong><span>主に<strong>力こぶの部分（上腕の前側）</strong>。後半になるほどここが張る・熱くなる感覚が出やすい。</span></div>
-          <ol class="howto"><li>足を肩幅くらいにして、左右に1個ずつ持つ。</li><li><strong>肘を体の横に固定</strong>する。</li><li>手のひらを前に向け、ダンベルを肩方向へ上げる。</li><li>上で止めすぎず、<strong>2〜3秒かけて下ろす</strong>。</li></ol>
-          <div class="dose"><strong>12〜20回 × 2セット</strong><span>手首や肘が痛むなら中止</span></div>
+        <article id="squat" class="feature-exercise reverse">
+          <figure class="feature-visual"><img src="assets/exercises/bodyweight-squat.svg" alt="自重スクワット。左は肩幅前後で立った開始姿勢、右はかかとを床につけてお尻を後ろへ引きながらしゃがんだ姿勢。"></figure>
+          <div class="feature-copy"><div class="feature-index">04 / SQUAT</div><h3>自重スクワット</h3><p class="feature-lead">後ろに椅子があるつもりで、お尻を後ろへ引きながらしゃがむ。</p><div class="target-line"><span>効く場所</span><p><strong>太もも・お尻</strong>。回数が増えると脚が重くなる・熱くなる感覚が出やすい。</p></div><ol class="steps"><li>足は肩幅前後、つま先は自然に少し外へ。</li><li>足裏全体で床を踏む。</li><li>お尻を後ろへ引きながら股関節・膝を曲げる。</li><li>膝はつま先とだいたい同じ方向へ。</li></ol><p class="movement-caution">深さより、かかとが浮かず同じフォームで戻れることを優先。</p></div>
         </article>
 
-        <article class="movement-card">
-          <div class="movement-head"><span class="step-number">02</span><div><h3>ショルダープレス</h3><p>肩 / 上腕三頭筋</p></div></div>
-          <figure class="exercise-visual">
-            <img src="assets/exercises/shoulder-press.svg" alt="ショルダープレス。左はダンベルを肩の横に構えた姿勢、右は頭上へ真っすぐ押し上げた姿勢。">
-            <figcaption><strong>ここだけ覚える：</strong>肩の横から頭の上へ、真上に押す。</figcaption>
-          </figure>
-          <div class="feel-target"><strong>効いている場所</strong><span>主に<strong>肩の前〜横</strong>と<strong>二の腕の後ろ</strong>。肩関節そのものが刺すように痛むのは別。</span></div>
-          <ol class="howto"><li>ダンベルを肩の横へ。手首はまっすぐ。</li><li>お腹に軽く力を入れ、腰を反らしすぎない。</li><li>ダンベルを<strong>真上へ押す</strong>。</li><li>肘をロックするほど伸ばさず、ゆっくり肩まで戻す。</li></ol>
-          <div class="dose"><strong>8〜15回 × 2セット</strong><span>腰が反るなら回数を減らす</span></div>
+        <article id="plank" class="feature-exercise">
+          <figure class="feature-visual"><img src="assets/exercises/plank.svg" alt="プランク。左は頭からかかとまで一直線にした正しい姿勢。右は腰が落ちる例と、お尻が上がりすぎる例。"></figure>
+          <div class="feature-copy"><div class="feature-index">05 / PLANK</div><h3>プランク</h3><p class="feature-lead">腰を上げ下げせず、頭・背中・お尻・かかとが一本につながる姿勢をキープ。</p><div class="target-line"><span>効く場所</span><p><strong>お腹まわり・体幹</strong>。背中や肩にも姿勢を支える疲れが出ることがあります。</p></div><ol class="steps"><li>肘を肩のほぼ真下へ。</li><li>頭からかかとまでをほぼ一直線に。</li><li>腰を反らさず、お尻を上げすぎない。</li><li>呼吸を続け、崩れる前に終了。</li></ol><div class="rep-inline"><strong>15〜30秒 × 2セット</strong><span>腰・首・肩に鋭い痛みが出たら終了。</span></div></div>
         </article>
+      </section>
 
-        <article class="movement-card">
-          <div class="movement-head"><span class="step-number">03</span><div><h3>ベントオーバーロー</h3><p>背中 / 肩の後ろ</p></div></div>
-          <figure class="exercise-visual">
-            <img src="assets/exercises/bent-over-row.svg" alt="ベントオーバーロー。左は背中をまっすぐにして前傾し腕を下げた姿勢、右は肘を腰の後ろへ引いた姿勢。">
-            <figcaption><strong>ここだけ覚える：</strong>ダンベルを上げるより、肘を腰の後ろへ引く。</figcaption>
-          </figure>
-          <div class="feel-target"><strong>効いている場所</strong><span>主に<strong>肩の後ろ〜肩甲骨のまわり・上背部</strong>。腕の前側も補助で疲れることがある。</span></div>
-          <ol class="howto"><li>膝を軽く曲げ、お尻を後ろへ引いて上体を前傾。</li><li>背中を丸めず、ダンベルを真下へ垂らす。</li><li><strong>肘を腰の後ろへ引く</strong>イメージで持ち上げる。</li><li>肩をすくめず、ゆっくり下ろす。</li></ol>
-          <div class="dose"><strong>15〜25回 × 2セット</strong><span>腰が痛むならフォームを中止して確認</span></div>
-        </article>
+      <section id="recovery" class="chapter" aria-labelledby="recovery-title">
+        <header class="chapter-heading"><div class="chapter-number">06</div><div><p class="chapter-kicker">RECOVERY</p><h2 id="recovery-title">筋肉痛・張りがある日</h2><p>遅発性筋肉痛（DOMS）は、慣れない運動や強い運動のあと1〜3日ほどして出ることがあります。</p></div></header>
+        <div class="recovery-list">
+          <article><span class="recovery-code ok">GO</span><div><h3>軽く動いてよい目安</h3><p>軽い張りやだるさで、日常動作とフォームに大きな問題がない。</p></div></article>
+          <article><span class="recovery-code caution">DOWN</span><div><h3>負荷を下げる</h3><p>フォームが保てない、いつもの回数がほとんどできない、筋肉痛が強い。</p></div></article>
+          <article><span class="recovery-code stop">STOP</span><div><h3>中止・相談を優先</h3><p>鋭い痛み、強い腫れ、しびれ、動かせないほどの脱力など。</p></div></article>
+        </div>
+      </section>
 
-        <article class="movement-card">
-          <div class="movement-head"><span class="step-number">04</span><div><h3>ダンベルスクワット</h3><p>太もも / お尻</p></div></div>
-          <figure class="exercise-visual">
-            <img src="assets/exercises/dumbbell-squat.svg" alt="ダンベルスクワット。左は左右にダンベルを持って立った姿勢、右はお尻を後ろへ引きながらしゃがんだ姿勢。">
-            <figcaption><strong>ここだけ覚える：</strong>真下に沈むより、お尻を後ろへ引きながらしゃがむ。</figcaption>
-          </figure>
-          <div class="feel-target"><strong>効いている場所</strong><span>主に<strong>太ももの前・太ももの後ろ・お尻</strong>。立ち上がる後半で脚とお尻がきつくなる。</span></div>
-          <ol class="howto"><li>左右に1個ずつ持ち、足を肩幅前後にする。</li><li>お尻を後ろへ引きながら膝を曲げる。</li><li><strong>3秒かけて下がる</strong>。</li><li>かかとを床につけたまま立ち上がる。</li></ol>
-          <div class="dose"><strong>15〜25回 × 2セット</strong><span>膝や腰の鋭い痛みはNG</span></div>
-        </article>
-      </div>
+      <section id="routine" class="chapter" aria-labelledby="routine-title">
+        <header class="chapter-heading"><div class="chapter-number">07</div><div><p class="chapter-kicker">HOW TO PROGRESS</p><h2 id="routine-title">3kgが軽くなってきたら</h2><p>重量をすぐ買い替えなくても、まず回数と動作速度で少し難しくできます。</p></div></header>
+        <div class="progress-track">
+          <article><span>STEP 1</span><h3>回数を少し増やす</h3><p>フォームが崩れず余裕なら、まず1〜3回ずつ増やします。</p></article>
+          <i aria-hidden="true"></i>
+          <article><span>STEP 2</span><h3>下ろす動作を遅くする</h3><p>2〜3秒かけて下ろすだけでも、3kgの負荷を感じやすくなります。</p></article>
+        </div>
+        <p class="chapter-footnote">回数・セット数・動作速度を一度に全部増やさず、1つずつ調整します。</p>
+      </section>
 
-      <div class="mini-routine">
-        <h3>迷ったら今日はこれ</h3>
-        <div class="routine-flow"><span>カール<br><strong>12〜20回</strong></span><b>→</b><span>プレス<br><strong>8〜15回</strong></span><b>→</b><span>ロー<br><strong>15〜25回</strong></span><b>→</b><span>スクワット<br><strong>15〜25回</strong></span></div>
-        <p>1周したら1〜2分休憩 → もう1周。最初はこれだけでOKです。</p>
-      </div>
-    </section>
+      <details class="sources" aria-labelledby="sources-title">
+        <summary id="sources-title">参考情報・このサイトの位置づけ</summary>
+        <div class="sources-body">
+          <ul class="source-list">
+            <li><a href="https://www.mayoclinic.org/healthy-lifestyle/fitness/multimedia/biceps-curl/vid-20084675">Mayo Clinic — Biceps curl with dumbbell</a></li>
+            <li><a href="https://www.mayoclinic.org/healthy-lifestyle/fitness/multimedia/bent-over-row/vid-20084680">Mayo Clinic — Bent-over row with dumbbell</a></li>
+            <li><a href="https://www.mayoclinic.org/healthy-lifestyle/fitness/multimedia/squat/vid-20084682">Mayo Clinic — Squat with dumbbell</a></li>
+            <li><a href="https://www.mayoclinic.org/healthy-lifestyle/fitness/multimedia/squat/vid-20084663">Mayo Clinic — Squat exercise</a></li>
+            <li><a href="https://www.mayoclinic.org/healthy-lifestyle/fitness/multimedia/modified-pushup/vid-20084674">Mayo Clinic — Modified pushup</a></li>
+            <li><a href="https://www.mayoclinic.org/healthy-lifestyle/fitness/in-depth/core-strength/art-20546851">Mayo Clinic — Core-strength exercises</a></li>
+            <li><a href="https://www.acefitness.org/resources/everyone/exercise-library/44/seated-biceps-curl/">ACE — Seated biceps curl</a></li>
+            <li><a href="https://www.acefitness.org/resources/everyone/exercise-library/45/seated-overhead-press/">ACE — Seated overhead press</a></li>
+            <li><a href="https://www.nhs.uk/live-well/exercise/sitting-exercises/">NHS — Sitting exercises / hip marching</a></li>
+            <li><a href="https://www.uclh.nhs.uk/patients-and-visitors/patient-information-pages/home-exercises-improve-strength-and-balance-following-hospital-admission">UCLH — Chair exercises / knee extension / seated marching</a></li>
+            <li><a href="https://my.clevelandclinic.org/health/diseases/delayed-onset-muscle-soreness">Cleveland Clinic — Delayed Onset Muscle Soreness (DOMS)</a></li>
+          </ul>
+          <p>このサイトは一般的な運動情報であり、個別の診断・治療・リハビリの指示を目的としたものではありません。</p>
+        </div>
+      </details>
+    </main>
+  </div>
 
-    <section id="seated" class="exercise featured-section seated-section">
-      <div class="section-heading">
-        <p class="tag">SEATED WORKOUT</p>
-        <h2>座ってできるメニュー</h2>
-        <p>床に寝たり立ち続けたりしたくない日に使えるメニュー。ダンベルあり2種目と、ダンベルなし2種目に分けています。</p>
-      </div>
-
-      <div class="chair-safety">
-        <strong>椅子の条件</strong>
-        <span>キャスターなし・ぐらつかない椅子を使い、足裏が床につく高さにします。ショルダープレスは背もたれがある椅子がおすすめです。</span>
-      </div>
-
-      <div class="seated-group-heading"><span class="seated-badge weighted">ダンベルあり</span><p>3kgを左右に1個ずつ。重ければ片手ずつ行ってください。</p></div>
-      <div class="dumbbell-grid seated-grid">
-        <article class="movement-card">
-          <div class="movement-head"><span class="step-number">S1</span><div><h3>座ってダンベルカール</h3><p>力こぶ / 3kg × 2</p></div></div>
-          <figure class="exercise-visual">
-            <img src="assets/exercises/seated-biceps-curl.svg" alt="椅子に座って行うダンベルカール。左は腕を下げた姿勢、右は肘を体の横に保ったままダンベルを肩へ近づけた姿勢。">
-            <figcaption><strong>ここだけ覚える：</strong>背すじを立て、肘を前へ出さずに曲げる。</figcaption>
-          </figure>
-          <div class="feel-target"><strong>効いている場所</strong><span>主に<strong>力こぶ（上腕の前側）</strong>。立って行うより体の反動を使いにくい。</span></div>
-          <ol class="howto"><li>椅子に深く座り、足裏を床につける。</li><li>左右にダンベルを持ち、腕を体の横へ。</li><li>肘の位置を変えず、肩へ向けて曲げる。</li><li>2〜3秒かけてゆっくり下ろす。</li></ol>
-          <div class="dose"><strong>10〜20回 × 2セット</strong><span>手首は前腕と一直線</span></div>
-        </article>
-
-        <article class="movement-card">
-          <div class="movement-head"><span class="step-number">S2</span><div><h3>座ってショルダープレス</h3><p>肩 / 二の腕 / 3kg × 2</p></div></div>
-          <figure class="exercise-visual">
-            <img src="assets/exercises/seated-shoulder-press.svg" alt="椅子に座って行うショルダープレス。左は肩の横にダンベルを構えた姿勢、右は腰を反らさず頭上へ押し上げた姿勢。">
-            <figcaption><strong>ここだけ覚える：</strong>腰を反らさず、肩の横から真上へ押す。</figcaption>
-          </figure>
-          <div class="feel-target"><strong>効いている場所</strong><span>主に<strong>肩の前〜横</strong>と<strong>二の腕の後ろ</strong>。肩関節の鋭い痛みはNG。</span></div>
-          <ol class="howto"><li>背もたれのある安定した椅子に座る。</li><li>ダンベルを肩の横へ構え、手首をまっすぐに。</li><li>お腹に軽く力を入れ、頭上へ押す。</li><li>勢いで落とさず、肩の横まで戻す。</li></ol>
-          <div class="dose"><strong>8〜15回 × 2セット</strong><span>3kg×2が重ければ片手ずつ</span></div>
-        </article>
-      </div>
-
-      <div class="seated-group-heading bodyweight-heading"><span class="seated-badge bodyweight">ダンベルなし</span><p>テレビや動画を見ながらでもやりやすい脚中心の2種目です。</p></div>
-      <div class="dumbbell-grid seated-grid">
-        <article class="movement-card">
-          <div class="movement-head"><span class="step-number">S3</span><div><h3>座って膝伸ばし</h3><p>太ももの前 / ダンベルなし</p></div></div>
-          <figure class="exercise-visual">
-            <img src="assets/exercises/seated-knee-extension.svg" alt="椅子に座って行う膝伸ばし。左は両足を床につけた姿勢、右は片膝をゆっくり伸ばした姿勢。">
-            <figcaption><strong>ここだけ覚える：</strong>太ももは椅子の上のまま、膝から下だけを前へ伸ばす。</figcaption>
-          </figure>
-          <div class="feel-target"><strong>効いている場所</strong><span>主に<strong>太ももの前</strong>。脚を伸ばしたときに太もも前側が固くなる感覚が目安。</span></div>
-          <ol class="howto"><li>背すじを立て、両足を床につける。</li><li>片脚の膝をゆっくり伸ばす。</li><li>伸ばした位置で1〜2秒止める。</li><li>ゆっくり戻し、反対脚も同じように行う。</li></ol>
-          <div class="dose"><strong>左右10〜15回 × 2セット</strong><span>膝が鋭く痛むなら中止</span></div>
-        </article>
-
-        <article class="movement-card">
-          <div class="movement-head"><span class="step-number">S4</span><div><h3>座ってもも上げ</h3><p>股関節まわり / 太もも / 体幹</p></div></div>
-          <figure class="exercise-visual">
-            <img src="assets/exercises/seated-march.svg" alt="椅子に座って行うもも上げ。左は両足を床につけた姿勢、右は上体を倒さず片膝を持ち上げた姿勢。">
-            <figcaption><strong>ここだけ覚える：</strong>上体を後ろに倒さず、左右の膝を交互に上げる。</figcaption>
-          </figure>
-          <div class="feel-target"><strong>効いている場所</strong><span>主に<strong>太ももの付け根〜前側</strong>。姿勢を保つため<strong>お腹まわり</strong>にも軽く力が入る。</span></div>
-          <ol class="howto"><li>椅子に座り、足裏を床へ。</li><li>背すじを保ったまま片膝を持ち上げる。</li><li>ゆっくり床へ戻す。</li><li>左右交互に繰り返す。</li></ol>
-          <div class="dose"><strong>左右10〜20回 × 2セット</strong><span>上体を大きく後ろへ倒さない</span></div>
-        </article>
-      </div>
-
-      <div class="mini-routine seated-routine">
-        <h3>座ったまま10分くらいやるなら</h3>
-        <div class="routine-flow"><span>座りカール<br><strong>10〜15回</strong></span><b>→</b><span>座りプレス<br><strong>8〜12回</strong></span><b>→</b><span>膝伸ばし<br><strong>左右10回</strong></span><b>→</b><span>もも上げ<br><strong>左右10回</strong></span></div>
-        <p>1周 → 1〜2分休憩 → もう1周。肩や手首に痛みがある日は、ダンベル2種目を飛ばして脚2種目だけでもOKです。</p>
-      </div>
-    </section>
-
-    <section id="pushup" class="exercise visual-exercise">
-      <div class="section-heading"><p class="tag">PUSH-UP</p><h2>腕立て伏せ</h2><p>胸・二の腕・体幹を使う。手首に痛みが出る日は無理に行いません。</p></div>
-      <figure class="exercise-visual standalone-visual"><img src="assets/exercises/push-up.svg" alt="腕立て伏せ。左は体を一直線にして腕を伸ばした開始姿勢、右は一直線を保ったまま胸を床へ近づけた姿勢。"><figcaption><strong>ここだけ覚える：</strong>頭からかかとまでを1本の板みたいに保ったまま、胸を下げて押し戻す。</figcaption></figure>
-      <div class="feel-target standalone-feel"><strong>効いている場所</strong><span>主に<strong>胸</strong>と<strong>二の腕の後ろ</strong>。お腹・背中も体を一直線に保つために力が入る。手首の付け根の痛みは「効いている」感覚ではありません。</span></div>
-      <div class="content-grid"><article class="card"><h3>フォーム</h3><ol><li>手は肩幅〜少し広め。</li><li>頭からかかとまでをほぼ一直線にする。</li><li>腰を反らさず、肘を真横に開きすぎない。</li><li>コントロールできる範囲まで胸を下げ、床を押して戻る。</li></ol></article><article class="card accent-card"><h3>手首が痛い場合</h3><p>痛みを我慢して続けず、壁腕立てや安定した高い台で負荷を下げます。それでも痛むなら腕立ては休みます。</p></article></div>
-    </section>
-
-    <section id="squat" class="exercise visual-exercise">
-      <div class="section-heading"><p class="tag">SQUAT</p><h2>自重スクワット</h2><p>ダンベルなしでも脚とお尻を鍛えられ、フォーム練習にも使えます。</p></div>
-      <figure class="exercise-visual standalone-visual"><img src="assets/exercises/bodyweight-squat.svg" alt="自重スクワット。左は肩幅前後で立った開始姿勢、右はかかとを床につけてお尻を後ろへ引きながらしゃがんだ姿勢。"><figcaption><strong>ここだけ覚える：</strong>後ろに椅子があるつもりで、お尻を後ろへ引きながらしゃがむ。</figcaption></figure>
-      <div class="feel-target standalone-feel"><strong>効いている場所</strong><span>主に<strong>太もも</strong>と<strong>お尻</strong>。しゃがんで立つ回数が増えると、この筋肉が重くなる・熱くなる感覚が出やすい。</span></div>
-      <div class="content-grid"><article class="card"><h3>フォーム</h3><ol><li>足は肩幅前後、つま先は自然に少し外へ。</li><li>足裏全体で床を踏み、かかとを浮かせない。</li><li>お尻を後ろへ引きながら股関節・膝を曲げる。</li><li>膝はつま先とだいたい同じ方向へ。</li></ol></article><article class="card"><h3>深さ</h3><p><strong>かかとが浮かず、ふらつかず、同じフォームで戻れる深さ</strong>を優先します。</p></article></div>
-    </section>
-
-    <section id="plank" class="exercise visual-exercise">
-      <div class="section-heading"><p class="tag">PLANK</p><h2>プランク</h2><p>動く種目ではなく、正しい一直線を保ち続ける体幹トレーニングです。</p></div>
-      <figure class="exercise-visual standalone-visual plank-visual"><img src="assets/exercises/plank.svg" alt="プランク。左は頭からかかとまで一直線にした正しい姿勢。右は腰が落ちる例と、お尻が上がりすぎる例。"><figcaption><strong>ここだけ覚える：</strong>腰を上げ下げせず、頭・背中・お尻・かかとが一本につながる姿勢をキープ。</figcaption></figure>
-      <div class="feel-target standalone-feel"><strong>効いている場所</strong><span>主に<strong>お腹まわり・体幹</strong>。背中や肩にも姿勢を支える疲れが出ることがある。腰が鋭く痛い場合は姿勢を崩して続けない。</span></div>
-      <div class="content-grid"><article class="card"><h3>フォーム</h3><ol><li>肘を肩のほぼ真下へ。</li><li>頭・背中・お尻・かかとをほぼ一直線に。</li><li>腰を反らさず、お尻を上げすぎない。</li><li>呼吸を続け、崩れる前に終了。</li></ol></article><article class="card accent-card"><h3>目安</h3><p>15〜30秒 × 2セットから。腰・首・肩に鋭い痛みが出たら終了します。</p></article></div>
-    </section>
-
-    <section id="recovery" class="exercise">
-      <div class="section-heading"><p class="tag">RECOVERY</p><h2>筋肉痛・張りがある日</h2><p>遅発性筋肉痛（DOMS）は、慣れない運動や強い運動のあと1〜3日ほどして出ることがあります。</p></div>
-      <div class="status-grid"><article class="status ok"><h3>軽く動いてよい目安</h3><p>軽い張りやだるさで、日常動作とフォームに大きな問題がない。</p></article><article class="status caution"><h3>負荷を下げる</h3><p>フォームが保てない、いつもの回数がほとんどできない、筋肉痛が強い。</p></article><article class="status stop"><h3>中止・相談を優先</h3><p>鋭い痛み、強い腫れ、しびれ、動かせないほどの脱力など。</p></article></div>
-    </section>
-
-    <section id="routine" class="exercise">
-      <div class="section-heading"><p class="tag">HOW TO PROGRESS</p><h2>3kgが軽くなってきたら</h2><p>重量をすぐ買い替えなくても、ある程度は難しくできます。</p></div>
-      <div class="content-grid progress-grid"><article class="card"><h3>① 回数を少し増やす</h3><p>フォームが崩れず余裕なら、まず1〜3回ずつ増やします。</p></article><article class="card"><h3>② 下ろす動作を遅くする</h3><p>2〜3秒かけて下ろすだけでも、3kgの負荷を感じやすくなります。</p></article></div>
-      <p class="footnote">回数・セット数・動作速度を一度に全部増やさず、1つずつ調整します。</p>
-    </section>
-
-    <section class="sources" aria-labelledby="sources-title">
-      <h2 id="sources-title">参考情報</h2>
-      <ul class="source-list">
-        <li><a href="https://www.mayoclinic.org/healthy-lifestyle/fitness/multimedia/biceps-curl/vid-20084675">Mayo Clinic — Biceps curl with dumbbell</a></li>
-        <li><a href="https://www.mayoclinic.org/healthy-lifestyle/fitness/multimedia/bent-over-row/vid-20084680">Mayo Clinic — Bent-over row with dumbbell</a></li>
-        <li><a href="https://www.mayoclinic.org/healthy-lifestyle/fitness/multimedia/squat/vid-20084682">Mayo Clinic — Squat with dumbbell</a></li>
-        <li><a href="https://www.mayoclinic.org/healthy-lifestyle/fitness/multimedia/squat/vid-20084663">Mayo Clinic — Squat exercise</a></li>
-        <li><a href="https://www.mayoclinic.org/healthy-lifestyle/fitness/multimedia/modified-pushup/vid-20084674">Mayo Clinic — Modified pushup</a></li>
-        <li><a href="https://www.mayoclinic.org/healthy-lifestyle/fitness/in-depth/core-strength/art-20546851">Mayo Clinic — Core-strength exercises</a></li>
-        <li><a href="https://www.acefitness.org/resources/everyone/exercise-library/44/seated-biceps-curl/">ACE — Seated biceps curl</a></li>
-        <li><a href="https://www.acefitness.org/resources/everyone/exercise-library/45/seated-overhead-press/">ACE — Seated overhead press</a></li>
-        <li><a href="https://www.nhs.uk/live-well/exercise/sitting-exercises/">NHS — Sitting exercises / hip marching</a></li>
-        <li><a href="https://www.uclh.nhs.uk/patients-and-visitors/patient-information-pages/home-exercises-improve-strength-and-balance-following-hospital-admission">UCLH — Chair exercises / knee extension / seated marching</a></li>
-        <li><a href="https://my.clevelandclinic.org/health/diseases/delayed-onset-muscle-soreness">Cleveland Clinic — Delayed Onset Muscle Soreness (DOMS)</a></li>
-      </ul>
-      <p class="footnote">このサイトは一般的な運動情報であり、個別の診断・治療・リハビリの指示を目的としたものではありません。</p>
-    </section>
-  </main>
-
-  <footer><div class="container">Home Workout Guide</div></footer>
+  <footer class="site-footer"><div class="container"><strong>HOME WORKOUT GUIDE</strong><span>フォーム優先。痛みを我慢して続けない。</span><a href="#top">上へ戻る ↑</a></div></footer>
 </body>
 </html>
