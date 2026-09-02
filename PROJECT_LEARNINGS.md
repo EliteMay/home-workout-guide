@@ -27,22 +27,40 @@
 ### PL-F-002 全情報を同じCard強度で並べ、長い説明ページに見えた
 
 - Date: 2026-09-02
-- Status: monitoring
+- Status: resolved
 - Severity: medium
 - Cost: medium
 - Symptom: Hero、注意、種目、回復、進め方がほぼ同じCard / Section rhythmで縦に続き、情報量が増えるほどHierarchyが弱くなった。
 - Expected: 最初に「今日何をやるか」が分かり、必要なフォームへすぐ移動できる。
 - Actual: どの情報も同じ強さで見え、ページ全体が長い説明の集合に見えた。
-- Trigger / Reproduction: 2026-09-02 redesign前の`index.html` / `styles.css`。
 - Root Cause: Content追加ごとに同じCard patternを足し、Information ArchitectureとPage Compositionを再設計していなかった。
-- Final Fix: Training Manual方向へFoundation Reset。First ViewにQuick Start、DesktopにSticky Rail、Exercise Cardは比較対象だけへ限定、自重はFeature Layout、回復はList、進め方はStepへ役割分担。
+- Final Fix: Exercise Cardは独立した種目に限定し、Safety / Recovery / Progressは別表現へ分ける。
 - Affected files / systems: `index.html`, `styles.css`
 - Detection method: User request「サイトの見た目を修正して」＋構造Review。
-- Regression Guard: Section追加時に既存Cardを複製する前に、List / Feature / Step / Dividerのどれが情報関係に合うか判断する。
-- Prevention: 2回以上同型Sectionが続き情報が増えた場合、Card追加よりPage Compositionを再評価する。
-- Related Issue / PR / Commit: `1c065ac5a9e8cacd6e472c2a3a1bd8250d6cd359`, `b20aeacd000242b0dd07d4bd0ce8aecebe30b639`
+- Regression Guard: Section追加時に既存Cardを複製する前に、その情報が本当に独立Objectか判断する。
+- Prevention: Card数ではなくContent semanticsでComponentを選ぶ。
 - Guide candidate: no
-- Guide note: web-project-guideのVisual Foundation Reset / Decorative Cardificationを適用したProject例。
+- Guide note: Decorative Cardificationを避けるProject例。
+
+### PL-F-003 別Projectの成功Directionを題材の雰囲気ごと持ち込みFPS感が出た
+
+- Date: 2026-09-02
+- Status: resolved
+- Severity: high
+- Cost: medium
+- Symptom: Training Manual / Sticky Rail / 暗色 / Grid / 番号Labelを組み合わせた結果、筋トレサイトなのにFPS攻略・Field Manualのような印象になった。
+- Expected: 健康・筋トレ用途として、運動画像と種目選択が自然に主役になる。
+- Actual: Tarkov Field Manualの構造原理を参照した際、Rail / dark manual / coded labelsなどSource固有のVisual moodまでTargetへ近づけてしまった。
+- Trigger / Reproduction: commit `ab0c7e8a80cdb59286e10871f8c804bef45d92a7` 付近のUI。
+- Root Cause: Validated DirectionからTransferすべき構造原理と、Copyすべきでない題材固有表層の切り分けが不十分だった。
+- Final Fix: Sticky Railを非表示化し、Light neutral background + soft green + Exercise Library型Card + workout-focused First Viewへ変更。ReferenceもHevy / Nike Training Club等のFitnessサービスへ変更。
+- Affected files / systems: `styles.css`, `README.md`, `PROJECT_LEARNINGS.md`
+- Detection method: User feedback「この成功例はちょっと違う」「FPS感がある」。
+- Regression Guard: Visual Referenceを選ぶ際、Project shapeだけでなく題材 / mood / primary visual materialまで近いか確認する。
+- Prevention: 別ProjectのValidated Directionは `Transfer / Rebuild / Do not copy` を明示し、Source固有のRail・dark mood・coded labels等を成功要因だと誤認しない。
+- Related Issue / PR / Commit: `ba8dac1208952b4480de87694fb087ce43c83547`
+- Guide candidate: yes
+- Guide note: web-project-guideのSuccess Factor Misattribution / Reference Transfer Ruleの具体例として再利用価値がある。
 
 ---
 
@@ -61,18 +79,19 @@
 - Guide candidate: no
 - Guide note: Home Workout Guide内の画像説明Contractとして再利用する。
 
-### PL-S-002 Training Manual型のVisual Direction
+### PL-S-002 Fitness App / Exercise Library方向
 
 - Date: 2026-09-02
-- Goal / Problem: 長くなった運動ガイドで、Hierarchyと移動のしやすさを改善する。
-- Adopted Pattern: Quick Start + Sticky Training Index + Manual Content。Exercise Card / Feature Layout / List / StepをContent semanticsで使い分ける。
-- Why it worked: 構造上はFirst Task、Navigation、画像、補助情報の優先順位を明確にできる。User Visual Validationはまだ待機中。
-- Trade-off: Desktopでは情報構造が明確になる一方、MobileではRailを使えないためTop navigationをHorizontal scrollへ再構成する必要がある。
-- Reuse when: このProjectでUserから肯定的Visual feedbackが得られた場合、今後のHome Workout Guide更新で維持する。
-- Avoid when: Userが現行より悪いと評価した場合。Polishを重ねずDirectionを再検討する。
-- Related files / tests: `index.html`, `styles.css`
+- Status: candidate / user validation待ち
+- Goal / Problem: FPS / Technical Manual感をなくし、運動用途として自然に見えるVisualへ戻す。
+- Adopted Pattern: Light neutral background、soft green accent、Top category navigation、Quick Start、Exercise image + muscle target + reps + instructionをまとめたExercise Card。
+- Why it may work: ProjectのPrimary Taskである「種目を選ぶ → 画像を見る → 回数とフォームを確認する」にVisual hierarchyを直接合わせている。
+- Trade-off: 明るいUIへ変えるため、暗色SVGはCard内のExercise previewとして扱い、Site全体の背景とは分離する。
+- Reuse when: Userから肯定的Visual feedbackが得られた場合、このProject内で維持する。
+- Avoid when: Userがまだ違和感を示した場合。色だけ微調整せず、Fitness Editorial / Workout Planner等の別Directionと比較する。
+- Related files / tests: `styles.css`, `index.html`
 - Guide candidate: no
-- Guide note: 現時点ではCandidate。Validated Directionへ昇格させない。
+- Guide note: User Validation前なので成功扱いしない。
 
 ---
 
@@ -80,4 +99,5 @@
 
 | ID | Type | Summary | Evidence | Next action |
 |---|---|---|---|---|
-| HWG-VIS-001 | success candidate | Training Manual型Compositionが運動ガイドに合うか | 2026-09-02 redesign、User visual validation待ち | User feedback後に維持 / 再設計を判断 |
+| HWG-VIS-001 | rejected | Tarkov / Field Manual系の成功Directionを筋トレGuideへ転用すると題材Mismatchが発生 | User feedback「FPS感がある」 | Reference Transfer Ruleの具体例としてGuide改善候補 |
+| HWG-VIS-002 | success candidate | Fitness App / Exercise Library方向 | 2026-09-02 CSS redesign、User visual validation待ち | User feedback後に維持 / 再設計を判断 |
