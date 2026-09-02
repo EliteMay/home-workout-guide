@@ -28,7 +28,7 @@
 
 GitHub Pagesで `index.html` を開く前提の静的サイトです。
 
-ページ上部では「迷ったら今日はこれ」を確認し、Desktopでは左側のTraining Indexから各章へ移動できます。Mobileでは上部ナビを横スクロールして主要カテゴリへ移動できます。
+ページ上部では「迷ったら今日はこれ」を確認し、上部ナビから立位ダンベル・座位・自重・回復へ移動できます。Desktop / Mobileともに、左側へ常設Railを置かず、運動画像と種目選択を主役にします。
 
 各種目は、**フォーム図 → 効いている場所 → 詳しい手順 → 回数目安 → 痛み・フォーム注意**の順で確認できます。
 
@@ -38,20 +38,23 @@ GitHub Pagesで `index.html` を開く前提の静的サイトです。
 
 ## Visual Direction
 
-現在のUIは **Training Manual / Structured Reference** を方向性にしています。
+現在のUIは **Fitness App / Exercise Library** を方向性にしています。
 
 - First Viewで「今日どれをやるか」を先に見せる。
-- DesktopではSticky Railで章移動を近くに保つ。
-- ダンベル種目は独立して比較できるためExercise Cardを使う。
-- 自重3種目は画像をより大きく見せるFeature Layoutを使い、Sectionごとの同型Card反復を避ける。
-- 回復・進め方はCard GridではなくList / Step表現を使う。
-- 色やEffectより、Typography / Spacing / Divider / DensityでHierarchyを作る。
-- 既存SVGの `#79d7a5` 系Accentは保持し、画像とUIのVisual languageを合わせる。
+- 常設の左RailやField Manual風のNavigationは使わず、上部の短いカテゴリNavigationへまとめる。
+- 明るいNeutral backgroundと柔らかいGreen Accentを基本にし、FPS / Tactical / Technical Console風の印象を避ける。
+- ダンベル・座位種目は、独立したExercise Objectとして画像 / 部位 / 回数 / 手順をCardにまとめる。
+- Exercise Cardではフォーム画像を強くし、回数と効く部位を短いChip / Highlightで見つけやすくする。
+- 自重3種目は大きい画像を使ったFeature Layoutを維持する。
+- 回復・進め方はExercise Cardとは別のStatus / Step表現を使う。
+- 既存SVGはユーザーから「だいぶわかりやすくなった」と評価されたためKEEPする。
 - 参考情報は通常利用時のNoiseを減らすため`details`へまとめる。
 
-このDirectionは `web-project-guide` のStructure-first Visual Designを基準にし、Validated Referenceでは `Tarkov Field Manual Knowledge Manual` の「学習順をRailと長文構造へ反映する」原理のみ参考にしています。具体的な色・幅・表層Designはコピーしていません。
+Visual Referenceは、Project用途が近い実フィットネスサービスを優先します。HevyのExercise Libraryにある「Exercise image / equipment / target muscle / instruction」を一つのExercise Objectとして扱う考え方と、Nike Training Clubの「Workoutの目的・Sets / Repsを先に理解できる構成」を参考にします。具体的なBrand color、Layout、Assetはコピーしません。
 
-現時点ではこのProject自身のVisual DirectionはUser Validation待ちであり、別Projectへ成功例として一般化しません。
+以前試した **Training Manual / Sticky Rail** 方向は、Userから「FPS感があり、このサイトには違う」と評価されたためRejected Evidenceとして扱い、現在Directionへ再利用しません。
+
+現時点では新しいFitness App方向もUser Visual Validation待ちであり、別Projectへ成功例として一般化しません。
 
 ## 崩してはいけない仕様
 
@@ -67,6 +70,7 @@ GitHub Pagesで `index.html` を開く前提の静的サイトです。
 - 小さい画面とキーボード操作でも主要情報へ到達できる状態を保つ。
 - 手首などに痛みが出る種目を、我慢して継続するよう案内しない。
 - Visual変更時も、既存の運動内容・安全注意・画像Assetを理由なく削除しない。
+- 別ProjectのValidated Directionを、そのProject固有の雰囲気ごと持ち込まない。
 
 ## 基本ルール
 
@@ -81,8 +85,8 @@ GitHub Pagesで `index.html` を開く前提の静的サイトです。
 
 ## ファイル構成
 
-- `index.html` — Training Manual型のページ構造、ナビゲーション、各フォーム図への参照
-- `styles.css` — Layout / Typography / Exercise Card / Sticky Rail / Responsive / Accessibility
+- `index.html` — Workoutカテゴリ、Quick Start、各Exercise情報、フォーム図への参照
+- `styles.css` — Fitness App / Exercise Library方向のLayout、Typography、Exercise Card、Responsive、Accessibility
 - `assets/exercises/dumbbell-curl.svg` — ダンベルカールの開始 / 終了図
 - `assets/exercises/shoulder-press.svg` — ショルダープレスの開始 / 終了図
 - `assets/exercises/bent-over-row.svg` — ベントオーバーローの開始 / 終了図
@@ -119,6 +123,6 @@ GitHub Pagesで `index.html` を開く前提の静的サイトです。
 - フォーム図は初心者が動きの方向や姿勢を理解するための説明用イラストで、身体の細かな関節角度を医学的に再現するものではありません。
 - 「効いている場所」は主に使われる筋肉の目安で、全員が同じ場所に同じ強さの感覚を持つとは限りません。
 - 座位種目でも体調や可動域によって合わない場合があり、痛みを我慢して続けることは想定していません。
-- HTML構造、ID重複、ローカル画像参照、CSSの括弧整合は静的に確認しています。
+- `index.html`内には旧Training RailのHTMLが残っていますが、現行CSSでは非表示です。将来HTMLを整理するときは内容・Anchorを壊さず削除できます。
 - この環境ではGitHub Pagesの最終描画を実ブラウザで確認できていないため、Visual最終確認は未完了です。
 - このサイトは一般的な運動情報をまとめたもので、診断、治療、個別のリハビリ指示の代わりではありません。
