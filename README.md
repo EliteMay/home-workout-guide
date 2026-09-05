@@ -1,193 +1,115 @@
 # Home Workout Guide
 
-自宅でできる基本的な自重トレーニングと、**3kgダンベル2個**を使った初心者向けメニューを、フォーム優先・無理をしない・続けやすい方針でまとめた個人用ガイドです。
+自宅でできる筋トレを、**種目を探す → フォームを見る → 回数・効く部位・注意点を確認 → 実行する**の流れで使う個人向け筋トレ図鑑です。
 
-## 収録内容
+正式な要件は [`REQUIREMENTS.md`](REQUIREMENTS.md) をSource of Truthとします。
 
-- 始める前の準備と中止目安
-- 「筋肉に効いている感覚」と「中止する痛み」の見分け方
-- 3kgダンベル2個でできる立位メニュー
-  - ダンベルカール
-  - ショルダープレス
-  - ベントオーバーロー
-  - ダンベルスクワット
-- 座ってできるメニュー
-  - 座ってダンベルカール
-  - 座ってショルダープレス
-  - 座って膝伸ばし
-  - 座ってもも上げ
-- 腕立て伏せ / 自重スクワット / プランク
-- 各種目のフォーム図、主に効く筋肉、回数目安、注意点
-- **3kgだけで負荷を上げる方法**
-  - 3〜4秒かけて下ろす
-  - 一番きつい位置で1〜2秒止める
-  - 1.5回法
-  - 片脚 / 片側へ寄せる
-  - 既存4種目のHard mode
-  - ブルガリアンスクワット / サイドレイズ / リバースフライ
-- 筋肉痛・張りがある日の考え方
-- Light / Dark theme切替
-- 一般向け医療・公的情報への参考リンク
+## 現在の実装
 
-## 使い方
+- 胸 / 背中 / 肩 / 腕 / 腹 / 脚の6部位、計18種目
+- 自重 / 3kgダンベル2個 / 安定した椅子を中心に構成
+- 部位 / 器具 / 難易度 / 種目名・筋肉名で検索・絞り込み
+- 各種目の詳細Dialog
+  - フォーム画像
+  - 主に効く筋肉
+  - 難易度 / 器具
+  - 回数 / セット / 休憩
+  - 開始姿勢 / 手順 / 呼吸
+  - 意識するポイント / よくある間違い
+  - 効いている感覚 / 中止サイン
+  - 簡単版 / 難しい版
+  - 3kgでの負荷UP
+  - 次のProgression
+- 筋トレ基礎16項目
+- 全身 / 上半身 / 下半身 / 短時間のメニュー例
+- 安全情報を独立Sectionで確認可能
+- Light / Dark theme
+- JavaScript / JSON読み込み失敗時も、安全情報と基本4種目はHTMLだけで確認可能
 
-GitHub Pagesで `index.html` を開く前提の静的サイトです。
+## Data構成
 
-ページ上部には **3kg × 2 基本メニュー**を置き、4種目と回数をすぐ確認できます。上部ナビから「ダンベル / 座って / 自重 / 負荷UP / 回復」へ移動できます。
+教材ContentはHTMLへ大量直書きせず、JSONを正本として管理します。
 
-各種目では、**フォーム画像 → 種目名 / 回数 → 効いている場所 → 詳しい手順 → 痛み・フォーム注意**の順で確認できます。
-
-3kgが軽くなってきた場合は、回数だけを増やし続けず、負荷UP章でTempo、Pause、1.5回法、片脚種目へ進みます。脚や背中のような大きな筋群では3kgだけではいずれ負荷上限が来やすいため、その点も本文で明記しています。
-
-テーマはOSのLight / Dark設定を初期値として使い、ヘッダー右端の切替で手動変更できます。手動選択は`localStorage`の`home-workout-theme`へ保存し、次回も維持します。保存できない環境でも、そのページを開いている間の切替は利用できます。
-
-座位メニューは、キャスターなし・ぐらつかない椅子を使い、足裏が床につく状態で行うことを前提にしています。ショルダープレスでは背もたれのある椅子を優先し、3kgを両手で持つのが重い場合は片手ずつに切り替えます。
-
-「効いている場所」は、正しく行ったときに筋肉の張り・熱さ・疲れを感じやすい場所の目安です。関節の鋭い痛みやしびれは「効いている」とは扱いません。翌日に筋肉痛が来ないことだけで効果の有無を判断しません。
-
-## 3kgだけで負荷を上げる方針
-
-このProjectでは、軽いダンベルを重く感じさせるために反動や崩れたフォームを使いません。
-
-優先順は次です。
-
-1. **Tempo** — 下ろす動作を3〜4秒にする
-2. **Pause** — 一番きつい位置で1〜2秒止める
-3. **1.5 reps** — Full repの途中にHalf repを足す
-4. **Unilateral / harder leverage** — 両脚種目を片脚寄りへ変更する
-5. **Exercise selection** — 3kgが効きやすいサイドレイズ、リバースフライ、ブルガリアンスクワット等へ切り替える
-
-セット終盤でかなりきつくなってもフォームを保てる範囲を優先します。毎セット無理に完全なFailureまで続けることは前提にしません。
-
-現在の4種目は、次のHard modeを本文に追加しています。
-
-- ダンベルカール: 1.5回 + 3秒下ろし
-- ショルダープレス: 下で2秒Pause + 3秒下ろし
-- ベントオーバーロー: 上で2秒収縮 + 4秒下ろし
-- ダンベルスクワット: 片脚系のSplit squat / Bulgarian split squatへProgression
-
-追加種目は、フォーム画像をまだ用意していないため、現時点では負荷UP章の短い説明として扱います。今後Full exercise cardへ昇格させる場合は、既存の開始→終了図ルールを適用します。
-
-## Visual Direction
-
-現在の候補は **Exercise-first Workout Board / Exercise Library** です。
-
-### Target Type
-
-- Primary Task: 種目を選ぶ → フォーム画像を見る → 回数と効く場所を確認 → 実行する
-- Content Model: 少数のExercise collection + Safety / Recovery guidance
-- Audience: 筋トレ初心者 / 自分用
-- Density: medium
-- Device: Desktop + Mobile
-- Primary Visual Material: フォーム図
-- Tone: 親しみやすい / 健康的 / 落ち着いた
-
-### Domain Research
-
-2026-09-02のVisual修正では、過去Projectの成功例を先に当てはめず、Fitness / Workout用途をWebで調査しています。
-
-参考にした用途上の原理:
-
-- **Hevy Exercise Library** — ExerciseごとにDemo / Equipment / Muscle target / Instructionsをまとめ、Exercise自体を主役にする。
-- **Nike Training Club** — Workoutの目的、sets / reps、必要に応じたdrill demonstrationを分かりやすく提示する。
-- **Fitbod Exercise Guide** — Exercise demonstrationとstep-by-step guidanceを近くに置く。
-
-コピーしないもの:
-
-- 各Service固有のBrand color / Font / Marketing Hero
-- Tracking / Account / Social / Recommendation等、このSiteに存在しない機能
-- Mobile AppのNavigationをそのままWebへ移すこと
-
-### Current UIの判断
-
-**KEEP**
-
-- Userから「だいぶわかりやすくなった」と評価された開始→終了フォーム図
-- 3kgダンベル2個 / 自重 / 座位というカテゴリ
-- 「効いている場所」と「関節痛はNG」の安全上の区別
-- 緑を主AccentにするIdentity
-- Exercise imageを最初に見せる現在のCard順序
-
-**FIX済み / 継続確認**
-
-- `HW`の角丸ロゴ箱と`BEGINNER GUIDE`を表示から除外し、文字だけのHeaderへ変更
-- Header navigationをPill Button型から普通のText navigationへ変更
-- Light themeだけでなくDark themeを追加
-- HeroをMarketing copyより「3kg×2で今日やる4種目」へ寄せる
-- Quick Startを実際の回数が読めるWorkout Boardへ変更
-
-**REMOVE / 表示を弱める**
-
-- FPS / Technical Manualを連想させるSticky Rail
-- 章番号、coded label、過度な英字Kicker
-- 意味の薄いSquare logo / subtitleセット
-- Cardを追加するだけの同型Section反復
-
-User feedbackではExercise-first方向は「悪くない」ものの、まだ「ここが良い」と言える強いVisual validationには到達していません。現段階では成功Directionへ昇格させず、Workout BoardがこのProject固有のSignatureとして機能するか継続確認します。
+- `data/exercises.json` — 18種目の詳細Data
+- `data/basics.json` — 筋トレ基礎
+- `app.js` — Data読込、検索 / 絞り込み、種目詳細Dialog
+- `index.html` — Information Architecture、静的Fallback、安全 / メニュー例
+- `styles.css` — Exercise-first UI、Light / Dark、Responsive、Accessibility
+- `theme.js` — Theme切替と`localStorage`保存
+- `assets/exercises/*.svg` — 開始 → 終了、または正しい姿勢 / NG姿勢のフォーム図
+- `tests/validate.mjs` — JSON Schema相当の必須値、18種目、6部位、Asset / HTML参照を検証
 
 ## 崩してはいけない仕様
 
-- GitHub Pagesだけで動く静的構成を維持する。
-- 外部ライブラリや外部サービスを必須にしない。
-- Theme切替が失敗しても運動情報の閲覧を妨げない。
-- 運動フォーム図はサイト単体で表示できる構成にする。
-- フォーム図は初心者が「どこからどこへ動かすか」を見て理解できるものにする。
-- 静止種目は、動作図より正しい姿勢 / NG姿勢の比較を優先してよい。
-- 各種目で「主に効く筋肉」と「関節痛などのNGサイン」を混同しない。
-- 座位種目は安定した椅子を前提にし、キャスター付きやぐらつく椅子を案内しない。
-- 初心者向けの分かりやすさと安全側の表現を優先する。
-- 未確認の健康情報を断定的に掲載しない。
-- 小さい画面とキーボード操作でも主要情報へ到達できる状態を保つ。
-- 手首などに痛みが出る種目を、我慢して継続するよう案内しない。
-- Visual変更時も、既存の運動内容・安全注意・画像Assetを理由なく削除しない。
-- 軽い重量を重く感じさせるために反動や関節への痛みを推奨しない。
+- 初心者が画像と文章の両方から動作を理解できること
+- 既存のユーザー評価済み「開始 → 終了」フォーム図を維持すること
+- 「主に効く筋肉」と「関節の鋭い痛み・しびれ等の中止サイン」を混同しないこと
+- 痛みを我慢して続ける案内をしないこと
+- ダンベルの反動、崩れたフォーム、関節痛を負荷UP方法として使わないこと
+- 椅子を使う種目はキャスターなし・ぐらつかない安定した椅子を前提にすること
+- GitHub Pages単体で動く静的構成を維持すること
+- Theme保存が失敗しても運動情報の閲覧を妨げないこと
+- Mobile / Keyboardでも主要情報へ到達できること
 
-## 基本ルール
+## Visual Direction
 
-- 筋肉が張る、熱くなる、重くなる、最後の数回がきつくなる感覚は起こりうる。
-- 関節の鋭い痛み、しびれ、強い腫れなどがある場合は中止する。
-- 強い筋肉痛が残る部位を無理に追い込まない。
-- フォームが崩れたら、そのセットは終了する。
-- 呼吸を止めない。
-- ダンベルを握る種目では、基本的に手首を前腕と一直線に保つ。
-- 古いダンベルは、プレートや持ち手のガタつき・割れ・危険なサビを確認してから使う。
-- 強い症状、長引く痛み、日常動作に支障がある状態は医療機関へ相談する。
+現在は **Exercise-first Workout Guide / Exercise Library** を継続します。
 
-## ファイル構成
+KEEP:
 
-- `index.html` — 本文、Navigation、Workout Board、Theme toggle、Exercise / Safety / Recovery / 3kg負荷UP構造
-- `styles.css` — Light / Dark theme、Exercise-first UI、Typography、Responsive、Accessibility
-- `theme.js` — Theme切替、OS theme連動、ユーザー選択保存、`theme-color`同期
-- `assets/exercises/*.svg` — 各種目の開始 / 終了または正解 / NGフォーム図
-- `PROJECT_LEARNINGS.md` — Visual失敗・成功候補・再発防止
-- `README.md` — 現在仕様と更新時の基準
+- 緑Accent
+- Light / Dark
+- Exercise画像を主役にする
+- 既存の開始 → 終了フォームSVG
+- Safety / RecoveryをExercise Cardと別Semanticで扱う
+- 意味のないSquare LogoやFPS / Technical Manual風表現を避ける
+
+今回の実装は別のVisual Directionへ刷新せず、既存のFitness / Exercise Library方向を18種目の図鑑用途へ拡張しています。
+
+## Safety
+
+一般的な運動ガイドとして、次を共通ルールにしています。
+
+- フォームが崩れたら回数より先に終了
+- 関節の鋭い痛み、しびれ、強い腫れ等がある場合は中止
+- ダンベルの破損・ガタつき・危険な錆を確認
+- 椅子はキャスターなし・ぐらつかないものを使用
+- 強い症状、長引く痛み、日常動作に支障がある場合は医療機関へ相談
+- 体調・けが等で運動が適切か分からない場合は専門家へ確認
+
+参考:
+
+- U.S. Department of Health and Human Services — Physical Activity Guidelines
+- Mayo Clinic — Strength training / Weight training technique
+
+## Testing
+
+ローカル / CIで次を確認します。
+
+```bash
+node --check app.js
+node --check theme.js
+node tests/validate.mjs
+```
+
+`tests/validate.mjs` は主に次を検証します。
+
+- JSON構文
+- 18種目が15〜20種目の完成範囲内
+- 胸 / 背中 / 肩 / 腕 / 腹 / 脚の6部位Coverage
+- 全種目の必須Data
+- ID重複
+- 画像参照
+- HTML内の主要Local Asset参照
+- 基礎知識Data
+
+Browser / Visual / Pages確認はStatic Validationと区別して記録します。
 
 ## Project
 
-- Profiles: `STATIC + PUBLIC-CONTENT`
-- Adopted web-project-guide: `1.13.0`
-- External dependencies: なし
-- Data storage: Theme preferenceのみ`localStorage`
-
-## 参考情報
-
-- Mayo Clinic — Strength training / Biceps curl / Bent-over row / Squat / Modified pushup / Core strength
-- American Council on Exercise (ACE) — Seated biceps curl / Seated overhead press
-- NHS — Sitting exercises / Hip marching
-- University College London Hospitals — Chair exercises / Knee extension / Seated marching
-- Cleveland Clinic — Delayed Onset Muscle Soreness (DOMS)
-- PubMed — Resistance training load and hypertrophy / strength meta-analysis (PMID: 33874848)
-- PubMed — Proximity to failure and hypertrophy meta-regression (PMID: 38970765)
-
-参考情報はサイト本文の「参考情報・このサイトの位置づけ」から確認できます。
-
-## 既知の制約 / 未確認
-
-- フォーム図は初心者が動きの方向や姿勢を理解するための説明用イラストで、身体の細かな関節角度を医学的に再現するものではありません。
-- 「効いている場所」は主に使われる筋肉の目安で、全員が同じ場所に同じ強さの感覚を持つとは限りません。
-- 座位種目でも体調や可動域によって合わない場合があり、痛みを我慢して続けることは想定していません。
-- Light / Dark themeは同じInformation hierarchyを保つことを前提とし、Themeごとに別Layoutは持ちません。
-- 3kgだけで行うProgressionは、特に脚・背中では将来的な負荷上限があります。最大筋力を伸ばす用途ではより重い抵抗が必要になる場合があります。
-- 新しい負荷UP用3種目は現時点で専用フォーム画像未作成です。
-- この環境ではGitHub Pagesの最終描画を実ブラウザで確認できない場合、Visual完成済みとは扱いません。
-- このサイトは一般的な運動情報をまとめたもので、診断、治療、個別のリハビリ指示の代わりではありません。
+- Profiles: `STATIC + DATA + LEARNING + PUBLIC-CONTENT`
+- External runtime dependencies: なし
+- User data storage: Theme preferenceのみ `localStorage`
+- Source of Truth: `REQUIREMENTS.md`
+- Long-term learnings: `PROJECT_LEARNINGS.md`
+- Common production rules: `EliteMay/web-project-guide`
